@@ -1,0 +1,82 @@
+</main>
+<script>
+(function () {
+  "use strict";
+
+  var select = document.getElementById("lang");
+  var articles = document.querySelectorAll("article[data-lang]");
+
+  // The ten tags the app itself uses, and every reasonable spelling of each.
+  // Chinese is the case that matters: a browser reports zh-CN or zh-TW, never
+  // zh-Hans, so a naive first-subtag match would send every Chinese reader to
+  // English.
+  var CANON = {};
+  ["en","es","pt","fr","de","it","ja","ko"].forEach(function (t) { CANON[t] = t; });
+  ["zh-hans","zh_hans","zh","zh-cn","zh-sg","zh-my","zh-chs","chs"].forEach(function (t) {
+    CANON[t] = "zh-Hans";
+  });
+  ["zh-hant","zh_hant","zh-tw","zh-hk","zh-mo","zh-cht","cht"].forEach(function (t) {
+    CANON[t] = "zh-Hant";
+  });
+
+  function canonical(raw) {
+    if (!raw) return null;
+    var tag = String(raw).trim().toLowerCase().replace(/_/g, "-");
+    if (CANON[tag]) return CANON[tag];
+    var base = tag.split("-")[0];          // pt-BR -> pt, en-GB -> en
+    return CANON[base] || null;
+  }
+
+  function requested() {
+    var q = null;
+    try { q = new URLSearchParams(location.search).get("lang"); } catch (e) {}
+    if (!q && location.search) {           // URLSearchParams missing: parse by hand
+      var m = location.search.match(/[?&]lang=([^&]+)/);
+      if (m) q = decodeURIComponent(m[1]);
+    }
+    return canonical(q) || canonical(location.hash.replace(/^#/, "")) || null;
+  }
+
+  function fromBrowser() {
+    var list = navigator.languages || [navigator.language || ""];
+    for (var i = 0; i < list.length; i++) {
+      var hit = canonical(list[i]);
+      if (hit) return hit;
+    }
+    return "en";
+  }
+
+  function show(tag) {
+    var found = false;
+    for (var i = 0; i < articles.length; i++) {
+      var on = articles[i].getAttribute("data-lang") === tag;
+      articles[i].classList.toggle("active", on);
+      if (on) found = true;
+    }
+    if (!found) return show("en");         // a language we do not have yet
+    document.documentElement.lang = tag;
+    if (select) select.value = tag;
+    var h1 = document.querySelector("article[data-lang].active h1");
+    if (h1) document.title = "Iris — " + h1.textContent.trim();
+    return tag;
+  }
+
+  show(requested() || fromBrowser());
+
+  if (select) {
+    select.addEventListener("change", function () {
+      var tag = show(select.value);
+      if (history.replaceState) {
+        history.replaceState(null, "", "?lang=" + encodeURIComponent(tag));
+      }
+      window.scrollTo(0, 0);
+    });
+  }
+
+  window.addEventListener("popstate", function () {
+    show(requested() || fromBrowser());
+  });
+})();
+</script>
+</body>
+</html>
