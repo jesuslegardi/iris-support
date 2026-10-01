@@ -53,6 +53,14 @@
       articles[i].classList.toggle("active", on);
       if (on) found = true;
     }
+    var sections = document.querySelectorAll('[data-anchor="delete-account"]');
+    for (var j = 0; j < sections.length; j++) {
+      if (sections[j].parentElement.getAttribute("data-lang") === tag) {
+        sections[j].id = "delete-account";
+      } else {
+        sections[j].removeAttribute("id");
+      }
+    }
     if (!found) return show("en");         // a language we do not have yet
     document.documentElement.lang = tag;
     if (select) select.value = tag;
@@ -61,20 +69,34 @@
     return tag;
   }
 
+  function scrollToSection() {
+    if (location.hash === "#delete-account") {
+      var section = document.getElementById("delete-account");
+      if (section) section.scrollIntoView();
+    }
+  }
+
   show(requested() || fromBrowser());
+  scrollToSection();
 
   if (select) {
     select.addEventListener("change", function () {
       var tag = show(select.value);
       if (history.replaceState) {
-        history.replaceState(null, "", "?lang=" + encodeURIComponent(tag));
+        history.replaceState(null, "", "?lang=" + encodeURIComponent(tag) + (location.hash === "#delete-account" ? location.hash : ""));
       }
-      window.scrollTo(0, 0);
+      if (location.hash === "#delete-account") scrollToSection();
+      else window.scrollTo(0, 0);
     });
   }
 
   window.addEventListener("popstate", function () {
     show(requested() || fromBrowser());
+    scrollToSection();
+  });
+  window.addEventListener("hashchange", function () {
+    show(requested() || fromBrowser());
+    scrollToSection();
   });
 })();
 </script>

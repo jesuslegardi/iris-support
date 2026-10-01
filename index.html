@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index, follow">
 <title>Iris — Help &amp; Support</title>
-<meta name="description" content="Help with Iris: accounts, habits, photographs, Iris the coach, voice, competitions, notifications and payments. Available in ten languages.">
+<meta name="description" content="Help with Iris: account and data deletion, habits, photographs, coaching, competitions and subscriptions. Available in ten languages.">
 <style>
   :root{
     --ground:#0B0910; --surface:#15111C; --text:#EDE9F2; --muted:#A79FB5;
@@ -97,6 +97,9 @@
   }
   .note p:last-child{margin-bottom:0}
 
+  .deletion{scroll-margin-top:5rem}
+  .deletion h2{margin-top:0}
+
   .colophon{
     margin-top:3.5rem; padding-top:1.6rem; border-top:1px solid var(--rule);
     color:var(--muted); font-size:.8rem; line-height:1.6;
@@ -144,23 +147,33 @@
 </header>
 <main>
 <noscript><span class="ns">The language picker needs JavaScript. This page is showing English.</span></noscript>
-<article data-lang="en" class="active">
+<article lang="en" data-lang="en" class="active">
 <h1>Help &amp; Support</h1>
-<p class="effective">Iris for iPhone and Android · Last reviewed 5 September 2026</p>
+<p class="effective">Iris · 1 October 2026</p>
 
 <div class="note">
 <p><strong>Write to <a href="mailto:iris26app@gmail.com">iris26app@gmail.com</a>.</strong> One person reads every message. You will normally have a reply within two or three days, and always within ten working days.</p>
 <p>If something is broken, it helps a great deal if you say: which phone you have, whether it is an iPhone or Android, the language Iris is set to, and what you did just before it went wrong. A screenshot is worth more than a description.</p>
 </div>
 
+<section class="note deletion" data-anchor="delete-account" id="delete-account" aria-labelledby="delete-heading-en">
+<h2 id="delete-heading-en">Delete your Iris account and data</h2>
+<p>You can request deletion even if you have uninstalled Iris or cannot open it. Email <a href="mailto:iris26app@gmail.com?subject=Delete%20my%20Iris%20account">iris26app@gmail.com</a> with the subject “Delete my Iris account”. Include your Iris username or the sign-in email and whether you used Apple or Google. If you used Hide My Email, include the Apple relay address if known. For a guest, include the account identifier if you have it; tell us if you do not. You do not need to reinstall the app to make a request.</p>
+<p>We verify ownership before deleting anyone’s data, normally by replying to the address associated with the account. We never ask for your password, verification codes, payment-card details or a payment. If a guest account has no recoverable identifier or linked sign-in, we may be unable to identify it safely; we will explain what can be verified. We respond within ten working days and explain the verification and completion steps.</p>
+<p>In the app, open the menu, your profile and Delete account. You may need to sign in again to confirm ownership or revoke Apple access. Deletion is permanent once completed. If the operation reports a failure, contact us so we can check the remaining cleanup.</p>
+<p>Deletion removes the sign-in identity, profile, habits, history, goals, milestones, conversations, settings, device records, onboarding diagnostics, queued coaching jobs, social connections, uploaded avatar, competition scores and shared photographs associated with the account. Competitions created by you are removed; other competitions can continue without you. In-app deletion also clears Iris photographs on that device. An email request cannot remotely erase files on an offline device.</p>
+<p>Some information is outside that deletion: copies in your gallery or device backups; files on another device until that device clears them; already-decided competition results; text-addressed speech caches that expire after 30 days; and security logs under the hosting provider’s retention. Store transaction records follow Apple’s or Google’s retention. RevenueCat records are handled separately: ask us to coordinate the deletion request. Support correspondence is kept as needed to resolve and document the request, and applicable legal retention may still apply. Competition photo copies expire when the round is decided, with an eight-day storage expiry backstop.</p>
+<p>Account deletion and subscription cancellation are separate. Cancel an active subscription with <a href="https://support.apple.com/en-us/118428">Apple</a> or <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>; uninstalling or deleting your account does not stop renewal. You may request account deletion without reinstalling or buying anything.</p>
+<p><a href="https://jesuslegardi.github.io/iris-privacy/?lang=en">Full privacy and retention details</a></p>
+</section>
+
 <h2><span class="n">1</span>Accounts and signing in</h2>
 
 <h3>Why is there no password?</h3>
-<p>Because a password is one more thing to lose, and storing passwords safely is a serious responsibility we chose not to take on. You sign in with Apple or with Google, and there is no other way in. There is no guest mode either — habits, history and photographs need an account to belong to.</p>
+<p>You can start Iris as a guest without supplying an email address. Firebase creates an anonymous account identifier so your setup, habits, goals and optional coaching belong to you. Guest does not mean that data stays offline. You can continue with the free tracker. Saving your account with Apple or Google is optional.</p>
 
 <h3>I signed in with Google and my habits are gone</h3>
-<p>You almost certainly have two accounts. <strong>Signing in with Apple and signing in with Google create separate accounts, even when both use the same email address.</strong> Your habits are safe in the other one. Sign out, sign back in with the method you used originally, and they will be there.</p>
-<p>We cannot merge two accounts. If you have put real work into both, write to us and we will talk through the options.</p>
+<p>Saving a guest account with an unused Apple or Google sign-in links that sign-in to the same Iris identifier and keeps your guest data. If that sign-in already belongs to an Iris account, Iris opens that existing account; it does not merge the two accounts or their private data. Use your original sign-in method to recover an existing account. Without a saved sign-in, access to guest data can be lost if the app or its credentials are removed.</p>
 
 <h3>Apple gave Iris a strange email address</h3>
 <p>That is “Hide My Email”. Apple gives Iris a relay address instead of your own, and mail sent to it reaches you. Nothing in Iris is affected. If you would rather we saw your real address, you can change it for Iris in your iPhone’s Settings under your name, then Sign in with Apple.</p>
@@ -169,8 +182,8 @@
 <p>Menu, then your profile. The username must be unique and at least three characters. Changing your display name updates it everywhere it appears, including in your friends’ lists and any competition you are in.</p>
 
 <h3>How do I delete my account?</h3>
-<p>Menu, then your profile, then Delete account. It happens immediately and it cannot be undone. On an Apple account you will be asked to sign in once more first — that is how we revoke Iris’s access to your Apple ID rather than leaving it dangling.</p>
-<p>Deleting takes your profile, habits, whole history, goals, milestones, conversations with Iris, friend connections and <strong>every Iris photograph on the phone you are holding</strong>. A competition you did not create carries on for the other players without you. The privacy policy sets out precisely what goes and what remains.</p>
+<p><a href="#delete-account">Delete your Iris account and data</a></p>
+<p>In the app, open the menu, your profile and Delete account. You may need to sign in again to confirm ownership or revoke Apple access. Deletion is permanent once completed. If the operation reports a failure, contact us so we can check the remaining cleanup.</p>
 
 <h2><span class="n">2</span>Habits and points</h2>
 
@@ -202,7 +215,7 @@
 
 <h3>Where are my habit photographs kept?</h3>
 <p><strong>On your phone, and nowhere else.</strong> They are not uploaded and we never see them. What we store is a short note that a photograph exists for that day, so that your second device knows to show a placeholder rather than nothing.</p>
-<p>The consequence is worth understanding: if you lose the phone, those photographs are gone, because they were only ever there.</p>
+<p>Habit tracking and unlimited full-quality local habit photographs are free. Taking a photograph does not subscribe you to coaching. Only a copy you explicitly share in a competition is uploaded for the other participants.</p>
 
 <h3>Can I keep a copy in my normal photo gallery?</h3>
 <p>Yes. After every photograph Iris asks whether to keep it in Iris only, or in Iris and your gallery. Choose the gallery and a copy goes into your camera roll, where your usual photo backup will pick it up like any other picture.</p>
@@ -248,7 +261,6 @@
 <p>Not at present. She has one voice per language, chosen deliberately.</p>
 
 <h2><span class="n">6</span>Friends and competitions</h2>
-
 <h3>How do I add someone?</h3>
 <p>Search for their username — you need the username, not their display name. They receive a request and a notification, and nothing is shared until they accept.</p>
 
@@ -267,6 +279,10 @@
 
 <h3>Someone is bothering me</h3>
 <p>Block them, from their profile. Blocking removes you from each other’s friend lists and stops any request or invitation reaching you. If it is worse than a nuisance, write to us.</p>
+<h3>Report unsafe content or request data help</h3>
+<p>Email iris26app@gmail.com to report an Iris reply, a profile or competition content. Identify the selected reply or content, the reason and any relevant username or competition; send only what is needed, not your whole conversation. Do not include passwords or sensitive information about other people. You can also request deletion of a conversation or ask to stop a use of your data. The developer reviews the report; email is not an emergency service.</p>
+
+<p data-report-retention="conditional">Where in-app reporting is available, a report contains your account identifier, the selected content, its reference, your reason and any note you choose to send. Only the developer and authorised moderators can read the private report. Selected reported content and moderation records are retained for up to 90 days, unless applicable law requires otherwise. Backups used to restore hidden content expire after 90 days. Account deletion removes reports and backups tied to your account under the account-deletion policy.</p>
 
 <h2><span class="n">7</span>Notifications and widgets</h2>
 
@@ -288,15 +304,9 @@
 <p>Menu, then Settings, then Language. It follows your account, so it is the same on every device you sign in on. The first time you install Iris it takes its best guess from your phone.</p>
 
 <h2><span class="n">9</span>Paying</h2>
-
-<h3>What does Iris cost?</h3>
-<p><strong>Nothing at the moment.</strong> Every feature is available and no limit is switched on. There is nothing to buy, and no card details are held anywhere in the application.</p>
-
-<h3>I paid before and want my purchase back</h3>
-<p>Menu, then the subscription page, then Restore purchases. That asks Apple or Google what you own and reinstates it. It is also what to use on a new phone.</p>
-
-<h3>How do I cancel?</h3>
-<p>Through Apple or Google, never through us — we cannot cancel a subscription on your behalf. On iPhone: Settings, your name, Subscriptions. On Android: the Play Store, your profile, Payments and subscriptions.</p>
+<p>The tracker and full-quality local habit photographs are free. Ongoing Iris coaching is an optional subscription where offered. Your installed app and the native App Store or Google Play purchase sheet show the available monthly or annual plan, localized price, billing period, renewal conditions and any trial. A seven-day trial is available only when the store says you are eligible; do not assume a previous subscriber qualifies. The store’s displayed terms apply before you confirm. A purchase is not required to continue tracking.</p>
+<p>Payment is handled by Apple or Google. To restore, use Restore purchases in Iris with the store account that bought the subscription and the correct Iris account. If verification is pending or access is missing, contact support before buying again. Manage or cancel the subscription with the store that billed you. Deleting Iris, deleting an Iris account, or withdrawing AI permission does not cancel a store subscription. Cancel before the trial or renewal deadline shown by that store to avoid the next charge.</p>
+<p>Account deletion and subscription cancellation are separate. Cancel an active subscription with <a href="https://support.apple.com/en-us/118428">Apple</a> or <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>; uninstalling or deleting your account does not stop renewal. You may request account deletion without reinstalling or buying anything.</p>
 
 <h2><span class="n">10</span>Your data</h2>
 
@@ -307,7 +317,7 @@
 <p>Yes. Write to us and we will send it. We answer within ten working days and we charge nothing.</p>
 
 <h3>Nothing is tracked?</h3>
-<p>Nothing. Iris contains no analytics software, no crash reporting and no advertising software. We do not know how many times you opened it, and there is no dashboard here showing us your behaviour.</p>
+<p>Iris does not sell personal data, show ads, or track you across other apps and websites. We record limited onboarding diagnostics under your account: steps such as starting, choosing a habit or goal, viewing an offer, continuing free, purchasing or saving an account, with timestamps and whether the account is a guest. These records contain no chat text and are removed with the account. RevenueCat subscription information and server security logs are separate. There is no third-party advertising or crash-reporting SDK. We keep at most 200 of these onboarding event records per account.</p>
 
 <h2><span class="n">11</span>When something is broken</h2>
 
@@ -326,23 +336,33 @@
 <p>This page loads no fonts, images, scripts or trackers from anywhere. Nothing about your visit is recorded by us.</p>
 </div>
 </article>
-<article data-lang="es">
+<article lang="es" data-lang="es">
 <h1>Ayuda y soporte</h1>
-<p class="effective">Iris para iPhone y Android · Revisado por última vez el 5 de septiembre de 2026</p>
+<p class="effective">Iris · 1 de octubre de 2026</p>
 
 <div class="note">
 <p><strong>Escríbenos a <a href="mailto:iris26app@gmail.com">iris26app@gmail.com</a>.</strong> Una sola persona lee todos los mensajes. Normalmente tendrás respuesta en dos o tres días, y siempre dentro de diez días hábiles.</p>
 <p>Si algo no funciona, ayuda mucho que nos digas: qué teléfono tienes, si es iPhone o Android, en qué idioma está Iris y qué hiciste justo antes de que fallara. Una captura de pantalla vale más que una descripción.</p>
 </div>
 
+<section class="note deletion" data-anchor="delete-account" aria-labelledby="delete-heading-es">
+<h2 id="delete-heading-es">Eliminar tu cuenta de Iris y tus datos</h2>
+<p>Puedes solicitar la eliminación aunque hayas desinstalado Iris o no puedas abrirlo. Escribe a <a href="mailto:iris26app@gmail.com?subject=Eliminar%20mi%20cuenta%20de%20Iris">iris26app@gmail.com</a> con el asunto «Eliminar mi cuenta de Iris». Incluye tu nombre de usuario o correo de acceso e indica si usaste Apple o Google. Si usaste Ocultar mi correo, incluye la dirección de reenvío si la conoces. Si eres invitado, incluye el identificador de cuenta si lo tienes; avísanos si no. No necesitas reinstalar la aplicación para solicitarlo.</p>
+<p>Verificamos la titularidad antes de eliminar datos, normalmente respondiendo al correo asociado a la cuenta. Nunca pedimos contraseñas, códigos de verificación, datos de tarjeta ni pagos. Si una cuenta de invitado no tiene un identificador recuperable ni acceso vinculado, puede que no podamos identificarla de forma segura; te explicaremos qué se puede verificar. Respondemos dentro de diez días hábiles y explicamos los pasos de verificación y finalización.</p>
+<p>En la aplicación, abre el menú, tu perfil y Eliminar cuenta. Puede ser necesario iniciar sesión de nuevo para confirmar la titularidad o revocar el acceso de Apple. La eliminación completada es permanente. Si aparece un error, escríbenos para revisar la limpieza pendiente.</p>
+<p>Se eliminan la identidad de acceso, el perfil, los hábitos, el historial, las metas, los hitos, las conversaciones, los ajustes, los registros de dispositivos, los diagnósticos iniciales, los trabajos de entrenamiento en espera, las conexiones sociales, el avatar subido, las puntuaciones y fotos compartidas asociadas. Las competencias que creaste se eliminan; las demás pueden continuar sin ti. La eliminación dentro de la aplicación también borra las fotos de Iris en ese dispositivo. Una solicitud por correo no puede borrar a distancia archivos de un dispositivo sin conexión.</p>
+<p>Quedan fuera de esa eliminación las copias en tu galería o respaldos; los archivos de otro dispositivo hasta que se borren allí; los resultados de rondas ya decididas; la caché de voz identificada por texto, que caduca a los 30 días; y los registros de seguridad según la retención del proveedor. Los registros de transacciones siguen la retención de Apple o Google. Los registros de RevenueCat se gestionan por separado: pídenos coordinar su eliminación. La correspondencia de soporte se conserva lo necesario para resolver y documentar la solicitud, y pueden existir obligaciones legales. Las copias de fotos de competencia caducan al decidirse la ronda, con una regla de caducidad de ocho días como respaldo.</p>
+<p>Eliminar la cuenta y cancelar la suscripción son acciones distintas. Cancela en <a href="https://support.apple.com/en-us/118428">Apple</a> o <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>; desinstalar o eliminar la cuenta no detiene la renovación. Puedes solicitar la eliminación sin reinstalar ni comprar nada.</p>
+<p><a href="https://jesuslegardi.github.io/iris-privacy/?lang=es">Detalles completos de privacidad y conservación</a></p>
+</section>
+
 <h2><span class="n">1</span>Cuentas y acceso</h2>
 
 <h3>¿Por qué no hay contraseña?</h3>
-<p>Porque una contraseña es una cosa más que se puede perder, y guardar contraseñas de forma segura es una responsabilidad seria que decidimos no asumir. Accedes con Apple o con Google, y no hay otra entrada. Tampoco hay modo de invitado: los hábitos, el historial y las fotografías necesitan una cuenta a la que pertenecer.</p>
+<p>Puedes empezar en Iris como invitado sin proporcionar un correo electrónico. Firebase crea un identificador de cuenta anónima para vincular contigo tu configuración, hábitos, metas y entrenamiento opcional. Ser invitado no significa que los datos permanezcan sin conexión. Puedes continuar con el seguimiento gratuito. Guardar tu cuenta con Apple o Google es opcional.</p>
 
 <h3>Entré con Google y mis hábitos desaparecieron</h3>
-<p>Es casi seguro que tienes dos cuentas. <strong>Acceder con Apple y acceder con Google crean cuentas distintas, incluso cuando ambas usan el mismo correo electrónico.</strong> Tus hábitos están a salvo en la otra. Cierra la sesión, vuelve a entrar con el método que usaste al principio y estarán ahí.</p>
-<p>No podemos fusionar dos cuentas. Si has puesto trabajo real en las dos, escríbenos y vemos las opciones.</p>
+<p>Al guardar una cuenta de invitado con un acceso de Apple o Google que no se haya usado, ese acceso se vincula al mismo identificador de Iris y conserva los datos del invitado. Si el acceso ya pertenece a una cuenta de Iris, se abre esa cuenta existente; no se fusionan las cuentas ni sus datos privados. Usa el método de acceso original para recuperar una cuenta existente. Sin un acceso guardado, puedes perder el acceso a los datos de invitado al eliminar la aplicación o sus credenciales.</p>
 
 <h3>Apple le dio a Iris un correo electrónico extraño</h3>
 <p>Eso es «Ocultar mi correo». Apple le entrega a Iris una dirección de reenvío en lugar de la tuya, y el correo enviado ahí te llega igual. Nada en Iris se ve afectado. Si prefieres que veamos tu dirección real, puedes cambiarlo para Iris en los Ajustes de tu iPhone, en tu nombre y luego en Iniciar sesión con Apple.</p>
@@ -351,8 +371,8 @@
 <p>Menú y luego tu perfil. El nombre de usuario tiene que ser único y de al menos tres caracteres. Al cambiar tu nombre visible se actualiza en todas partes donde aparece, incluidas las listas de tus amigos y cualquier competencia en la que estés.</p>
 
 <h3>¿Cómo elimino mi cuenta?</h3>
-<p>Menú, luego tu perfil, luego Eliminar cuenta. Ocurre de inmediato y no se puede deshacer. En una cuenta de Apple te pediremos iniciar sesión una vez más antes: así revocamos el acceso de Iris a tu Apple ID en lugar de dejarlo colgando.</p>
-<p>Eliminar se lleva tu perfil, tus hábitos, todo tu historial, tus metas, tus hitos, tus conversaciones con Iris, tus conexiones de amistad y <strong>todas las fotografías de Iris del teléfono que tienes en la mano</strong>. Una competencia que no creaste tú continúa para los demás jugadores sin ti. La política de privacidad detalla exactamente qué se va y qué queda.</p>
+<p><a href="#delete-account">Eliminar tu cuenta de Iris y tus datos</a></p>
+<p>En la aplicación, abre el menú, tu perfil y Eliminar cuenta. Puede ser necesario iniciar sesión de nuevo para confirmar la titularidad o revocar el acceso de Apple. La eliminación completada es permanente. Si aparece un error, escríbenos para revisar la limpieza pendiente.</p>
 
 <h2><span class="n">2</span>Hábitos y puntos</h2>
 
@@ -384,7 +404,7 @@
 
 <h3>¿Dónde se guardan mis fotografías de hábitos?</h3>
 <p><strong>En tu teléfono y en ningún otro sitio.</strong> No se suben y nosotros no las vemos nunca. Lo que guardamos es una nota corta de que existe una fotografía para ese día, para que tu segundo dispositivo sepa mostrar un marcador en lugar de nada.</p>
-<p>La consecuencia conviene entenderla: si pierdes el teléfono, esas fotografías se pierden, porque solo estuvieron ahí.</p>
+<p>El seguimiento de hábitos y las fotos locales ilimitadas de hábitos en calidad completa son gratuitos. Tomar una foto no te suscribe al entrenamiento. Solo se sube para los demás participantes una copia que compartas expresamente en una competencia.</p>
 
 <h3>¿Puedo guardar una copia en mi galería normal?</h3>
 <p>Sí. Después de cada fotografía Iris pregunta si guardarla solo en Iris, o en Iris y en tu galería. Elige la galería y una copia va a tu carrete, donde tu copia de seguridad habitual de fotos la tomará como cualquier otra imagen.</p>
@@ -430,7 +450,6 @@
 <p>Por ahora no. Tiene una voz por idioma, elegida a propósito.</p>
 
 <h2><span class="n">6</span>Amigos y competencias</h2>
-
 <h3>¿Cómo agrego a alguien?</h3>
 <p>Busca su nombre de usuario: necesitas el nombre de usuario, no su nombre visible. Recibe una solicitud y una notificación, y no se comparte nada hasta que acepta.</p>
 
@@ -449,6 +468,10 @@
 
 <h3>Alguien me está molestando</h3>
 <p>Bloquéalo desde su perfil. El bloqueo os quita de las listas de amigos del otro e impide que te llegue cualquier solicitud o invitación. Si es algo más que una molestia, escríbenos.</p>
+<h3>Denunciar contenido inseguro o pedir ayuda con tus datos</h3>
+<p>Escribe a iris26app@gmail.com para denunciar una respuesta de Iris, un perfil o contenido de una competencia. Identifica la respuesta o contenido seleccionado, el motivo y el usuario o competencia relevante; envía solo lo necesario, no toda la conversación. No incluyas contraseñas ni información sensible de otras personas. También puedes solicitar borrar una conversación o detener un uso de tus datos. El desarrollador revisa la denuncia; el correo no es un servicio de emergencia.</p>
+
+<p data-report-retention="conditional">Donde esté disponible la denuncia dentro de la aplicación, incluye tu identificador de cuenta, el contenido seleccionado, su referencia, el motivo y cualquier nota que decidas enviar. Solo el desarrollador y los moderadores autorizados pueden leer la denuncia privada. El contenido denunciado y los registros de moderación se conservan hasta 90 días, salvo que la ley exija otra cosa. Las copias para restaurar contenido oculto caducan a los 90 días. La eliminación de la cuenta borra las denuncias y copias vinculadas a ella conforme a la política de eliminación de cuentas.</p>
 
 <h2><span class="n">7</span>Notificaciones y widgets</h2>
 
@@ -470,15 +493,9 @@
 <p>Menú, luego Ajustes, luego Idioma. Va con tu cuenta, así que es el mismo en todos los dispositivos en los que entres. La primera vez que instalas Iris, hace su mejor conjetura a partir de tu teléfono.</p>
 
 <h2><span class="n">9</span>Pagos</h2>
-
-<h3>¿Cuánto cuesta Iris?</h3>
-<p><strong>Nada por el momento.</strong> Todas las funciones están disponibles y no hay ningún límite activo. No hay nada que comprar, y no se guardan datos de tarjeta en ninguna parte de la aplicación.</p>
-
-<h3>Pagué antes y quiero recuperar mi compra</h3>
-<p>Menú, luego la página de suscripción, luego Restaurar compras. Eso le pregunta a Apple o a Google qué tienes y lo reinstaura. Es también lo que hay que usar en un teléfono nuevo.</p>
-
-<h3>¿Cómo cancelo?</h3>
-<p>A través de Apple o de Google, nunca a través de nosotros: no podemos cancelar una suscripción en tu nombre. En iPhone: Ajustes, tu nombre, Suscripciones. En Android: la tienda de Play, tu perfil, Pagos y suscripciones.</p>
+<p>El seguimiento y las fotos locales de hábitos en calidad completa son gratuitos. El entrenamiento continuo de Iris es una suscripción opcional donde se ofrezca. La aplicación instalada y la hoja de compra nativa de App Store o Google Play muestran el plan mensual o anual, el precio local, el período de cobro, las condiciones de renovación y cualquier prueba. La prueba de siete días solo está disponible si la tienda confirma que cumples los requisitos; una suscripción anterior puede impedirlo. Antes de confirmar se aplican las condiciones que muestra la tienda. No es necesario comprar para seguir registrando hábitos.</p>
+<p>Apple o Google gestiona el pago. Usa Restaurar compras en Iris con la cuenta de la tienda que compró la suscripción y la cuenta correcta de Iris. Si la verificación está pendiente o falta el acceso, contacta con soporte antes de volver a comprar. Gestiona o cancela en la tienda que te cobró. Eliminar Iris o su cuenta, o retirar el permiso de IA, no cancela la suscripción. Cancela antes del plazo de prueba o renovación que indique la tienda para evitar el siguiente cobro.</p>
+<p>Eliminar la cuenta y cancelar la suscripción son acciones distintas. Cancela en <a href="https://support.apple.com/en-us/118428">Apple</a> o <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>; desinstalar o eliminar la cuenta no detiene la renovación. Puedes solicitar la eliminación sin reinstalar ni comprar nada.</p>
 
 <h2><span class="n">10</span>Tus datos</h2>
 
@@ -489,7 +506,7 @@
 <p>Sí. Escríbenos y te la enviamos. Respondemos dentro de diez días hábiles y no cobramos nada.</p>
 
 <h3>¿No se rastrea nada?</h3>
-<p>Nada. Iris no contiene software de análisis, ni reporte de errores, ni software publicitario. No sabemos cuántas veces la abriste, y aquí no hay ningún panel que nos muestre tu comportamiento.</p>
+<p>Iris no vende datos personales, no muestra anuncios y no te rastrea entre otras aplicaciones o sitios. Guardamos diagnósticos limitados de la introducción en tu cuenta: empezar, elegir hábito o meta, ver una oferta, continuar gratis, comprar o guardar la cuenta, con fecha y condición de invitado. No contienen texto del chat y se eliminan con la cuenta. La información de RevenueCat y los registros de seguridad son independientes. No hay un SDK externo de publicidad ni de informes de fallos. Conservamos como máximo 200 registros de estos eventos iniciales por cuenta.</p>
 
 <h2><span class="n">11</span>Cuando algo se rompe</h2>
 
@@ -508,23 +525,33 @@
 <p>Esta página no carga tipografías, imágenes, scripts ni rastreadores de ningún sitio. No registramos nada de tu visita.</p>
 </div>
 </article>
-<article data-lang="pt">
+<article lang="pt" data-lang="pt">
 <h1>Ajuda e suporte</h1>
-<p class="effective">Iris para iPhone e Android · Revisado pela última vez em 5 de setembro de 2026</p>
+<p class="effective">Iris · 1 de outubro de 2026</p>
 
 <div class="note">
 <p><strong>Escreva para <a href="mailto:iris26app@gmail.com">iris26app@gmail.com</a>.</strong> Uma única pessoa lê todas as mensagens. Normalmente você terá resposta em dois ou três dias, e sempre dentro de dez dias úteis.</p>
 <p>Se algo não estiver funcionando, ajuda muito você dizer: qual telefone você tem, se é iPhone ou Android, em que idioma o Iris está e o que você fez pouco antes de dar errado. Uma captura de tela vale mais do que uma descrição.</p>
 </div>
 
+<section class="note deletion" data-anchor="delete-account" aria-labelledby="delete-heading-pt">
+<h2 id="delete-heading-pt">Excluir sua conta Iris e seus dados</h2>
+<p>Você pode solicitar a exclusão mesmo após desinstalar o Iris ou sem conseguir abri-lo. Envie um e-mail para <a href="mailto:iris26app@gmail.com?subject=Excluir%20minha%20conta%20Iris">iris26app@gmail.com</a> com o assunto “Excluir minha conta Iris”. Informe seu nome de usuário ou e-mail de acesso e se usou Apple ou Google. Se usou Ocultar Meu E-mail, informe o endereço de retransmissão, se souber. Como convidado, informe o identificador da conta se o tiver; avise se não tiver. Não é preciso reinstalar o aplicativo para solicitar.</p>
+<p>Verificamos a titularidade antes de excluir dados, normalmente respondendo ao endereço vinculado à conta. Nunca pedimos senha, códigos de verificação, dados do cartão nem pagamento. Se uma conta de convidado não tiver identificador recuperável ou acesso vinculado, talvez não possamos identificá-la com segurança; explicaremos o que pode ser verificado. Respondemos em até dez dias úteis e explicamos as etapas de verificação e conclusão.</p>
+<p>No aplicativo, abra o menu, seu perfil e Excluir conta. Pode ser necessário entrar novamente para confirmar a titularidade ou revogar o acesso Apple. A exclusão concluída é permanente. Se houver erro, fale conosco para verificarmos a limpeza restante.</p>
+<p>A exclusão remove identidade de acesso, perfil, hábitos, histórico, metas, marcos, conversas, ajustes, registros de dispositivos, diagnósticos iniciais, tarefas de acompanhamento pendentes, conexões sociais, avatar enviado, pontuações e fotos compartilhadas associados à conta. Competições criadas por você são removidas; outras podem continuar sem você. A exclusão no aplicativo também apaga fotos Iris nesse dispositivo. Uma solicitação por e-mail não pode apagar remotamente arquivos de um dispositivo offline.</p>
+<p>Ficam fora dessa exclusão cópias na galeria ou backups; arquivos em outro dispositivo até serem apagados nele; resultados de rodadas já encerradas; cache de voz identificado pelo texto, que expira em 30 dias; e registros de segurança conforme a retenção do provedor. Transações seguem a retenção da Apple ou do Google. Registros da RevenueCat são tratados separadamente: peça nossa ajuda para encaminhar a exclusão. Correspondência de suporte fica pelo tempo necessário para resolver e documentar a solicitação, sujeita a exigências legais. Fotos de competição expiram ao encerrar a rodada, com regra de expiração de oito dias como proteção adicional.</p>
+<p>Excluir a conta e cancelar a assinatura são ações diferentes. Cancele na <a href="https://support.apple.com/en-us/118428">Apple</a> ou no <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>; desinstalar ou excluir a conta não interrompe a renovação. Você pode pedir a exclusão sem reinstalar nem comprar nada.</p>
+<p><a href="https://jesuslegardi.github.io/iris-privacy/?lang=pt">Detalhes de privacidade e retenção</a></p>
+</section>
+
 <h2><span class="n">1</span>Contas e entrada</h2>
 
 <h3>Por que não existe senha?</h3>
-<p>Porque uma senha é mais uma coisa para perder, e guardar senhas com segurança é uma responsabilidade séria que decidimos não assumir. Você entra com a Apple ou com o Google, e não há outra porta. Também não há modo de visitante: hábitos, histórico e fotografias precisam de uma conta a que pertencer.</p>
+<p>Você pode começar no Iris como convidado sem informar um e-mail. O Firebase cria um identificador de conta anônima para associar a você a configuração, os hábitos, as metas e o acompanhamento opcional. Ser convidado não significa que os dados fiquem offline. Você pode continuar com o acompanhamento gratuito de hábitos. Salvar a conta com Apple ou Google é opcional.</p>
 
 <h3>Entrei com o Google e meus hábitos desapareceram</h3>
-<p>É quase certo que você tem duas contas. <strong>Entrar com a Apple e entrar com o Google criam contas separadas, mesmo quando as duas usam o mesmo e-mail.</strong> Seus hábitos estão a salvo na outra. Saia, entre de novo pelo método que usou originalmente e eles estarão lá.</p>
-<p>Não podemos unir duas contas. Se você investiu trabalho real nas duas, escreva para nós e vemos as opções.</p>
+<p>Salvar uma conta de convidado com um acesso Apple ou Google ainda não usado vincula esse acesso ao mesmo identificador Iris e preserva os dados. Se o acesso já pertencer a uma conta Iris, essa conta existente será aberta; as duas contas e seus dados privados não são mesclados. Use o método de acesso original para recuperar uma conta existente. Sem um acesso salvo, os dados do convidado podem ficar inacessíveis se o aplicativo ou suas credenciais forem removidos.</p>
 
 <h3>A Apple deu ao Iris um e-mail estranho</h3>
 <p>Isso é o «Ocultar meu e-mail». A Apple entrega ao Iris um endereço de redirecionamento em vez do seu, e a mensagem enviada para lá chega até você. Nada no Iris é afetado. Se preferir que vejamos seu endereço real, pode alterar isso para o Iris nos Ajustes do seu iPhone, no seu nome e depois em Iniciar Sessão com a Apple.</p>
@@ -533,8 +560,8 @@
 <p>Menu e depois seu perfil. O nome de usuário precisa ser único e ter ao menos três caracteres. Ao mudar seu nome de exibição, ele é atualizado em todos os lugares em que aparece, inclusive nas listas dos seus amigos e em qualquer competição em que você esteja.</p>
 
 <h3>Como excluo minha conta?</h3>
-<p>Menu, depois seu perfil, depois Excluir conta. Acontece na hora e não pode ser desfeito. Numa conta Apple pediremos que você entre mais uma vez antes: é assim que revogamos o acesso do Iris ao seu Apple ID em vez de deixá-lo solto.</p>
-<p>Excluir leva seu perfil, seus hábitos, todo o seu histórico, suas metas, seus marcos, suas conversas com o Iris, suas conexões de amizade e <strong>todas as fotografias do Iris no telefone que você tem na mão</strong>. Uma competição que você não criou continua para os outros jogadores sem você. A política de privacidade detalha exatamente o que vai e o que fica.</p>
+<p><a href="#delete-account">Excluir sua conta Iris e seus dados</a></p>
+<p>No aplicativo, abra o menu, seu perfil e Excluir conta. Pode ser necessário entrar novamente para confirmar a titularidade ou revogar o acesso Apple. A exclusão concluída é permanente. Se houver erro, fale conosco para verificarmos a limpeza restante.</p>
 
 <h2><span class="n">2</span>Hábitos e pontos</h2>
 
@@ -566,7 +593,7 @@
 
 <h3>Onde ficam guardadas minhas fotografias de hábitos?</h3>
 <p><strong>No seu telefone, e em nenhum outro lugar.</strong> Elas não são enviadas e nós nunca as vemos. O que guardamos é uma nota curta de que existe uma fotografia naquele dia, para que seu segundo aparelho saiba mostrar um marcador em vez de nada.</p>
-<p>Vale entender a consequência: se você perder o telefone, essas fotografias se perdem, porque elas só estiveram ali.</p>
+<p>O acompanhamento de hábitos e as fotos locais ilimitadas em qualidade original são gratuitos. Tirar uma foto não assina o acompanhamento da Iris. Só uma cópia que você compartilhar expressamente em uma competição é enviada para os participantes.</p>
 
 <h3>Posso guardar uma cópia na minha galeria normal?</h3>
 <p>Sim. Depois de cada fotografia o Iris pergunta se deve guardá-la só no Iris, ou no Iris e na sua galeria. Escolha a galeria e uma cópia vai para o seu rolo da câmera, onde seu backup de fotos habitual a pegará como qualquer outra imagem.</p>
@@ -612,7 +639,6 @@
 <p>Por enquanto não. Ela tem uma voz por idioma, escolhida de propósito.</p>
 
 <h2><span class="n">6</span>Amigos e competições</h2>
-
 <h3>Como adiciono alguém?</h3>
 <p>Busque o nome de usuário da pessoa: você precisa do nome de usuário, não do nome de exibição. Ela recebe um pedido e uma notificação, e nada é compartilhado até que aceite.</p>
 
@@ -631,6 +657,10 @@
 
 <h3>Alguém está me incomodando</h3>
 <p>Bloqueie a pessoa, no perfil dela. O bloqueio retira vocês das listas de amigos um do outro e impede que qualquer pedido ou convite chegue a você. Se for pior do que um incômodo, escreva para nós.</p>
+<h3>Denunciar conteúdo inseguro ou pedir ajuda com dados</h3>
+<p>Escreva para iris26app@gmail.com para denunciar uma resposta da Iris, um perfil ou conteúdo de competição. Identifique a resposta ou conteúdo, o motivo e o usuário ou competição relevante; envie só o necessário, não a conversa inteira. Não inclua senhas nem dados sensíveis de terceiros. Você também pode pedir a exclusão de uma conversa ou interromper um uso dos dados. O desenvolvedor analisa a denúncia; o e-mail não é um serviço de emergência.</p>
+
+<p data-report-retention="conditional">Onde a denúncia no aplicativo estiver disponível, ela contém o identificador da conta, o conteúdo selecionado, sua referência, o motivo e qualquer nota que você escolher enviar. Só o desenvolvedor e moderadores autorizados podem ler a denúncia privada. Conteúdo denunciado e registros de moderação ficam por até 90 dias, salvo exigência legal diferente. Cópias usadas para restaurar conteúdo oculto expiram após 90 dias. A exclusão da conta remove denúncias e cópias vinculadas a ela conforme a política de exclusão de contas.</p>
 
 <h2><span class="n">7</span>Notificações e widgets</h2>
 
@@ -652,15 +682,9 @@
 <p>Menu, depois Ajustes, depois Idioma. Ele acompanha sua conta, então é o mesmo em todos os aparelhos em que você entrar. Na primeira vez que você instala o Iris, ele faz o melhor palpite a partir do seu telefone.</p>
 
 <h2><span class="n">9</span>Pagamento</h2>
-
-<h3>Quanto custa o Iris?</h3>
-<p><strong>Nada no momento.</strong> Todos os recursos estão disponíveis e nenhum limite está ativo. Não há nada para comprar, e nenhum dado de cartão fica guardado em qualquer parte do aplicativo.</p>
-
-<h3>Paguei antes e quero minha compra de volta</h3>
-<p>Menu, depois a página de assinatura, depois Restaurar compras. Isso pergunta à Apple ou ao Google o que você tem e reativa. É também o que usar num telefone novo.</p>
-
-<h3>Como cancelo?</h3>
-<p>Pela Apple ou pelo Google, nunca por nós: não podemos cancelar uma assinatura em seu nome. No iPhone: Ajustes, seu nome, Assinaturas. No Android: a loja Play, seu perfil, Pagamentos e assinaturas.</p>
+<p>O acompanhamento de hábitos e as fotos locais em qualidade original são gratuitos. O acompanhamento contínuo da Iris é uma assinatura opcional onde oferecido. O aplicativo e a tela nativa da App Store ou Google Play mostram o plano mensal ou anual disponível, preço local, período de cobrança, renovação e eventual teste. O teste de sete dias só vale quando a loja confirma sua elegibilidade; assinantes anteriores podem não se qualificar. Valem os termos mostrados pela loja antes da confirmação. Não é preciso comprar para continuar acompanhando hábitos.</p>
+<p>Apple ou Google recebe o pagamento. Use Restaurar compras no Iris com a conta da loja que comprou a assinatura e a conta Iris correta. Se a verificação estiver pendente ou faltar acesso, fale com o suporte antes de comprar novamente. Gerencie ou cancele na loja que cobrou. Excluir o aplicativo ou a conta, ou retirar a permissão de IA, não cancela a assinatura. Cancele antes do prazo de teste ou renovação indicado pela loja para evitar a próxima cobrança.</p>
+<p>Excluir a conta e cancelar a assinatura são ações diferentes. Cancele na <a href="https://support.apple.com/en-us/118428">Apple</a> ou no <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>; desinstalar ou excluir a conta não interrompe a renovação. Você pode pedir a exclusão sem reinstalar nem comprar nada.</p>
 
 <h2><span class="n">10</span>Seus dados</h2>
 
@@ -671,7 +695,7 @@
 <p>Sim. Escreva para nós e enviamos. Respondemos dentro de dez dias úteis e não cobramos nada.</p>
 
 <h3>Nada é rastreado?</h3>
-<p>Nada. O Iris não contém software de análise, nem relatório de falhas, nem software de publicidade. Não sabemos quantas vezes você o abriu, e não há aqui nenhum painel nos mostrando seu comportamento.</p>
+<p>O Iris não vende dados pessoais, não exibe anúncios nem rastreia você em outros aplicativos e sites. Registramos diagnósticos limitados da introdução na sua conta: iniciar, escolher hábito ou meta, ver uma oferta, continuar gratuitamente, comprar ou salvar a conta, com horário e indicação de convidado. Não contêm texto do chat e são excluídos com a conta. As informações da RevenueCat e os registros de segurança são separados. Não há SDK externo de publicidade ou de relatórios de falhas. Guardamos no máximo 200 registros desses eventos de introdução por conta.</p>
 
 <h2><span class="n">11</span>Quando algo quebra</h2>
 
@@ -690,23 +714,33 @@
 <p>Esta página não carrega fontes, imagens, scripts nem rastreadores de lugar algum. Nada da sua visita é registrado por nós.</p>
 </div>
 </article>
-<article data-lang="fr">
+<article lang="fr" data-lang="fr">
 <h1>Aide et assistance</h1>
-<p class="effective">Iris pour iPhone et Android · Dernière révision le 5 septembre 2026</p>
+<p class="effective">Iris · 1 octobre 2026</p>
 
 <div class="note">
 <p><strong>Écrivez-nous à <a href="mailto:iris26app@gmail.com">iris26app@gmail.com</a>.</strong> Une seule personne lit tous les messages. Vous aurez normalement une réponse en deux ou trois jours, et toujours dans les dix jours ouvrables.</p>
 <p>Si quelque chose ne fonctionne pas, cela aide beaucoup de nous dire : quel téléphone vous avez, s'il s'agit d'un iPhone ou d'un Android, dans quelle langue Iris est réglée, et ce que vous avez fait juste avant la panne. Une capture d'écran vaut mieux qu'une description.</p>
 </div>
 
+<section class="note deletion" data-anchor="delete-account" aria-labelledby="delete-heading-fr">
+<h2 id="delete-heading-fr">Supprimer votre compte Iris et vos données</h2>
+<p>Même sans l’application, écrivez à <a href="mailto:iris26app@gmail.com?subject=Supprimer%20mon%20compte%20Iris">iris26app@gmail.com</a>, objet « Supprimer mon compte Iris ». Indiquez votre nom d’utilisateur ou e-mail de connexion et Apple ou Google. Avec Masquer mon adresse e-mail, indiquez l’adresse relais si connue. Pour un invité, fournissez l’identifiant si vous l’avez ; sinon, dites-le. Aucune réinstallation n’est nécessaire pour demander la suppression.</p>
+<p>Nous vérifions la propriété, normalement en répondant à l’adresse liée au compte. Nous ne demandons jamais mot de passe, code de vérification, coordonnées bancaires ou paiement. Sans identifiant récupérable ni connexion liée, un compte invité peut être impossible à identifier sûrement ; nous expliquerons les vérifications possibles. Nous répondons sous dix jours ouvrés et précisons les étapes et la confirmation.</p>
+<p>Dans l’application : menu, profil, Supprimer le compte. Une nouvelle connexion peut être demandée pour vérifier la propriété ou révoquer Apple. La suppression terminée est définitive. En cas d’erreur, contactez-nous pour vérifier le nettoyage restant.</p>
+<p>Sont supprimés l’identité de connexion, le profil, les habitudes, l’historique, les objectifs, les étapes, les conversations, les réglages, les appareils, les diagnostics, les tâches de coaching en attente, les liens sociaux, l’avatar envoyé, les scores et photos partagées associés. Vos compétitions sont supprimées ; celles des autres peuvent continuer sans vous. La suppression dans l’application efface aussi les photos Iris de cet appareil. Une demande par e-mail ne peut pas effacer à distance un appareil hors ligne.</p>
+<p>Restent hors de cette suppression : galerie et sauvegardes personnelles, fichiers sur un autre appareil jusqu’à leur effacement, résultats de manches déjà décidées, cache vocal indexé par texte expirant après 30 jours et journaux de sécurité selon la conservation de l’hébergeur. Apple et Google conservent les transactions selon leurs règles. Demandez-nous de coordonner séparément la suppression chez RevenueCat. Les échanges de support sont conservés le temps de traiter et documenter la demande, sous réserve d’obligations légales. Les photos de compétition expirent à la décision de la manche, avec une règle de stockage de huit jours en secours.</p>
+<p>Suppression du compte et résiliation sont distinctes. Résiliez auprès d’<a href="https://support.apple.com/en-us/118428">Apple</a> ou de <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a> ; désinstaller ou supprimer le compte ne bloque pas le renouvellement. Vous pouvez demander la suppression sans réinstaller ni acheter.</p>
+<p><a href="https://jesuslegardi.github.io/iris-privacy/?lang=fr">Détails de confidentialité et de conservation</a></p>
+</section>
+
 <h2><span class="n">1</span>Comptes et connexion</h2>
 
 <h3>Pourquoi n'y a-t-il pas de mot de passe ?</h3>
-<p>Parce qu'un mot de passe est une chose de plus à perdre, et que conserver des mots de passe en sécurité est une responsabilité sérieuse que nous avons choisi de ne pas prendre. Vous vous connectez avec Apple ou avec Google, et il n'existe aucune autre entrée. Il n'y a pas non plus de mode invité : les habitudes, l'historique et les photographies ont besoin d'un compte auquel appartenir.</p>
+<p>Vous pouvez commencer Iris en mode invité sans fournir d’adresse e-mail. Firebase crée un identifiant anonyme auquel sont rattachés votre configuration, vos habitudes, vos objectifs et le coaching facultatif. Invité ne signifie pas hors ligne. Vous pouvez poursuivre le suivi gratuit. Enregistrer votre compte avec Apple ou Google est facultatif.</p>
 
 <h3>Je me suis connecté avec Google et mes habitudes ont disparu</h3>
-<p>Vous avez presque certainement deux comptes. <strong>Se connecter avec Apple et se connecter avec Google créent des comptes distincts, même lorsque les deux utilisent la même adresse électronique.</strong> Vos habitudes sont intactes dans l'autre. Déconnectez-vous, reconnectez-vous par la méthode utilisée au départ, et elles seront là.</p>
-<p>Nous ne pouvons pas fusionner deux comptes. Si vous avez réellement travaillé sur les deux, écrivez-nous et nous examinerons les possibilités.</p>
+<p>Enregistrer un compte invité avec une connexion Apple ou Google encore inutilisée conserve le même identifiant Iris et ses données. Si cette connexion appartient déjà à un compte Iris, ce compte existant s’ouvre ; les comptes et leurs données privées ne sont pas fusionnés. Pour retrouver un compte, utilisez sa connexion d’origine. Sans connexion enregistrée, supprimer l’application ou ses identifiants peut faire perdre l’accès aux données invité.</p>
 
 <h3>Apple a donné à Iris une adresse électronique étrange</h3>
 <p>C'est « Masquer mon adresse e-mail ». Apple remet à Iris une adresse de relais au lieu de la vôtre, et le courrier qui y est envoyé vous parvient. Rien dans Iris n'en est affecté. Si vous préférez que nous voyions votre adresse réelle, vous pouvez le changer pour Iris dans les Réglages de votre iPhone, sous votre nom, puis Connexion avec Apple.</p>
@@ -715,8 +749,8 @@
 <p>Menu, puis votre profil. Le nom d'utilisateur doit être unique et comporter au moins trois caractères. Changer votre nom affiché le met à jour partout où il apparaît, y compris dans les listes de vos amis et dans toute compétition à laquelle vous participez.</p>
 
 <h3>Comment supprimer mon compte ?</h3>
-<p>Menu, puis votre profil, puis Supprimer le compte. Cela prend effet immédiatement et ne peut pas être annulé. Sur un compte Apple, nous vous demanderons d'abord de vous reconnecter une fois : c'est ainsi que nous révoquons l'accès d'Iris à votre identifiant Apple au lieu de le laisser en suspens.</p>
-<p>La suppression emporte votre profil, vos habitudes, tout votre historique, vos objectifs, vos jalons, vos conversations avec Iris, vos liens d'amitié et <strong>toutes les photographies d'Iris sur le téléphone que vous tenez</strong>. Une compétition que vous n'avez pas créée continue pour les autres joueurs sans vous. La politique de confidentialité expose précisément ce qui part et ce qui reste.</p>
+<p><a href="#delete-account">Supprimer votre compte Iris et vos données</a></p>
+<p>Dans l’application : menu, profil, Supprimer le compte. Une nouvelle connexion peut être demandée pour vérifier la propriété ou révoquer Apple. La suppression terminée est définitive. En cas d’erreur, contactez-nous pour vérifier le nettoyage restant.</p>
 
 <h2><span class="n">2</span>Habitudes et points</h2>
 
@@ -748,7 +782,7 @@
 
 <h3>Où sont conservées mes photographies d'habitudes ?</h3>
 <p><strong>Sur votre téléphone, et nulle part ailleurs.</strong> Elles ne sont pas téléversées et nous ne les voyons jamais. Ce que nous conservons est une courte note indiquant qu'une photographie existe pour ce jour, afin que votre second appareil sache afficher un repère plutôt que rien.</p>
-<p>La conséquence mérite d'être comprise : si vous perdez le téléphone, ces photographies sont perdues, car elles n'ont jamais été ailleurs.</p>
+<p>Le suivi et les photos locales d’habitudes, illimitées et en pleine qualité, sont gratuits. Prendre une photo ne souscrit aucun abonnement. Seule une copie expressément partagée dans une compétition est envoyée aux autres participants.</p>
 
 <h3>Puis-je en garder une copie dans ma galerie habituelle ?</h3>
 <p>Oui. Après chaque photographie, Iris demande s'il faut la garder seulement dans Iris, ou dans Iris et votre galerie. Choisissez la galerie et une copie passe dans votre pellicule, où votre sauvegarde de photos habituelle la prendra comme n'importe quelle autre image.</p>
@@ -794,7 +828,6 @@
 <p>Pas pour l'instant. Elle a une voix par langue, choisie à dessein.</p>
 
 <h2><span class="n">6</span>Amis et compétitions</h2>
-
 <h3>Comment ajouter quelqu'un ?</h3>
 <p>Recherchez son nom d'utilisateur : il vous faut le nom d'utilisateur, pas le nom affiché. La personne reçoit une demande et une notification, et rien n'est partagé avant qu'elle accepte.</p>
 
@@ -813,6 +846,10 @@
 
 <h3>Quelqu'un me dérange</h3>
 <p>Bloquez cette personne depuis son profil. Le blocage vous retire des listes d'amis l'un de l'autre et empêche toute demande ou invitation de vous parvenir. Si c'est plus qu'une nuisance, écrivez-nous.</p>
+<h3>Signaler un contenu dangereux ou demander de l’aide sur les données</h3>
+<p>Écrivez à iris26app@gmail.com pour signaler une réponse Iris, un profil ou un contenu de compétition. Indiquez le contenu précis, le motif et l’utilisateur ou la compétition concernée ; seulement le nécessaire, pas toute la conversation. N’envoyez ni mots de passe ni données sensibles d’autrui. Vous pouvez aussi demander la suppression d’une conversation ou l’arrêt d’un usage de vos données. Le développeur examine le signalement ; l’e-mail n’est pas un service d’urgence.</p>
+
+<p data-report-retention="conditional">Lorsque le signalement dans l’application est disponible, il contient votre identifiant de compte, le contenu sélectionné, sa référence, le motif et toute note que vous choisissez d’envoyer. Seuls le développeur et les modérateurs autorisés peuvent lire le signalement privé. Le contenu signalé et les dossiers de modération sont conservés au maximum 90 jours, sauf obligation légale contraire. Les sauvegardes permettant de restaurer un contenu masqué expirent après 90 jours. La suppression du compte efface les signalements et sauvegardes liés à ce compte selon la politique de suppression des comptes.</p>
 
 <h2><span class="n">7</span>Notifications et widgets</h2>
 
@@ -834,15 +871,9 @@
 <p>Menu, puis Réglages, puis Langue. Elle suit votre compte, elle est donc la même sur tous les appareils où vous vous connectez. À la première installation, Iris fait sa meilleure supposition d'après votre téléphone.</p>
 
 <h2><span class="n">9</span>Paiement</h2>
-
-<h3>Combien coûte Iris ?</h3>
-<p><strong>Rien pour le moment.</strong> Toutes les fonctions sont disponibles et aucune limite n'est activée. Il n'y a rien à acheter, et aucune donnée de carte n'est conservée où que ce soit dans l'application.</p>
-
-<h3>J'ai payé auparavant et je veux retrouver mon achat</h3>
-<p>Menu, puis la page d'abonnement, puis Restaurer les achats. Cela demande à Apple ou à Google ce que vous possédez et le rétablit. C'est aussi ce qu'il faut utiliser sur un nouveau téléphone.</p>
-
-<h3>Comment résilier ?</h3>
-<p>Par Apple ou par Google, jamais par nous : nous ne pouvons pas résilier un abonnement en votre nom. Sur iPhone : Réglages, votre nom, Abonnements. Sur Android : la boutique Play, votre profil, Paiements et abonnements.</p>
+<p>Le suivi et les photos locales en pleine qualité sont gratuits. Le coaching continu Iris est un abonnement facultatif lorsqu’il est proposé. L’application et la fenêtre native App Store ou Google Play indiquent le forfait mensuel ou annuel, le prix local, la période, le renouvellement et l’essai éventuel. L’essai de sept jours exige l’éligibilité confirmée par la boutique ; un ancien abonnement peut l’exclure. Les conditions affichées avant confirmation font foi. Aucun achat n’est nécessaire pour continuer le suivi.</p>
+<p>Utilisez Restaurer les achats dans Iris avec le compte de boutique ayant acheté et le bon compte Iris. Si la vérification est en attente ou l’accès absent, contactez-nous avant de racheter. Gérez ou résiliez auprès de la boutique ayant facturé. Supprimer Iris ou son compte, ou retirer une autorisation d’IA, ne résilie pas l’abonnement. Résiliez avant l’échéance d’essai ou de renouvellement indiquée pour éviter le prélèvement suivant.</p>
+<p>Suppression du compte et résiliation sont distinctes. Résiliez auprès d’<a href="https://support.apple.com/en-us/118428">Apple</a> ou de <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a> ; désinstaller ou supprimer le compte ne bloque pas le renouvellement. Vous pouvez demander la suppression sans réinstaller ni acheter.</p>
 
 <h2><span class="n">10</span>Vos données</h2>
 
@@ -853,7 +884,7 @@
 <p>Oui. Écrivez-nous et nous vous l'enverrons. Nous répondons dans les dix jours ouvrables et nous ne facturons rien.</p>
 
 <h3>Rien n'est suivi ?</h3>
-<p>Rien. Iris ne contient aucun logiciel d'analyse, aucun rapport de plantage et aucun logiciel publicitaire. Nous ne savons pas combien de fois vous l'avez ouverte, et il n'y a ici aucun tableau de bord nous montrant votre comportement.</p>
+<p>Iris ne vend pas de données personnelles, ne diffuse pas de publicité et ne vous suit pas entre applications et sites. Des diagnostics limités de l’introduction sont enregistrés dans votre compte : démarrage, choix d’habitude ou d’objectif, offre consultée, poursuite gratuite, achat ou enregistrement du compte, avec date et statut invité. Aucun texte de conversation ; ils sont supprimés avec le compte. Les données RevenueCat et journaux de sécurité sont distincts. Aucun SDK tiers de publicité ni de rapports de plantage. Nous conservons au maximum 200 de ces événements d’introduction par compte.</p>
 
 <h2><span class="n">11</span>Quand quelque chose ne marche pas</h2>
 
@@ -872,23 +903,33 @@
 <p>Cette page ne charge aucune police, image, script ni traceur, d'où que ce soit. Rien de votre visite n'est enregistré par nous.</p>
 </div>
 </article>
-<article data-lang="de">
+<article lang="de" data-lang="de">
 <h1>Hilfe und Support</h1>
-<p class="effective">Iris für iPhone und Android · Zuletzt geprüft am 5. September 2026</p>
+<p class="effective">Iris · 1. Oktober 2026</p>
 
 <div class="note">
 <p><strong>Schreiben Sie an <a href="mailto:iris26app@gmail.com">iris26app@gmail.com</a>.</strong> Eine einzige Person liest jede Nachricht. In der Regel haben Sie innerhalb von zwei oder drei Tagen eine Antwort, in jedem Fall innerhalb von zehn Werktagen.</p>
 <p>Wenn etwas nicht funktioniert, hilft es sehr, wenn Sie schreiben: welches Telefon Sie haben, ob iPhone oder Android, auf welche Sprache Iris eingestellt ist, und was Sie unmittelbar davor getan haben. Ein Bildschirmfoto ist mehr wert als eine Beschreibung.</p>
 </div>
 
+<section class="note deletion" data-anchor="delete-account" aria-labelledby="delete-heading-de">
+<h2 id="delete-heading-de">Iris-Konto und Daten löschen</h2>
+<p>Auch nach der Deinstallation kannst du an <a href="mailto:iris26app@gmail.com?subject=Iris-Konto%20loeschen">iris26app@gmail.com</a> mit Betreff „Iris-Konto löschen“ schreiben. Nenne Benutzernamen oder Anmelde-E-Mail und Apple oder Google. Bei E-Mail-Adresse verbergen nenne nach Möglichkeit die Relay-Adresse. Als Gast nenne die Kontokennung, falls vorhanden; andernfalls teile das mit. Für die Anfrage ist keine Neuinstallation nötig.</p>
+<p>Vor der Löschung prüfen wir die Inhaberschaft, normalerweise durch Antwort an die zugehörige E-Mail-Adresse. Wir verlangen niemals Passwort, Bestätigungscodes, Kartendaten oder Zahlung. Ein Gastkonto ohne wiederherstellbare Kennung oder verknüpfte Anmeldung lässt sich möglicherweise nicht sicher zuordnen; wir erklären die verfügbaren Prüfungen. Wir antworten innerhalb von zehn Werktagen und erläutern Prüfung und Abschluss.</p>
+<p>In der App: Menü, Profil, Konto löschen. Eine erneute Anmeldung kann zur Bestätigung oder zum Widerruf des Apple-Zugangs nötig sein. Eine abgeschlossene Löschung ist endgültig. Melde Fehler, damit wir die verbleibende Bereinigung prüfen können.</p>
+<p>Gelöscht werden Anmeldeidentität, Profil, Gewohnheiten, Verlauf, Ziele, Meilensteine, Gespräche, Einstellungen, Gerätedaten, Einführungsdiagnosen, ausstehende Coaching-Aufträge, soziale Verbindungen, hochgeladener Avatar sowie zugehörige Wettbewerbswertungen und geteilte Fotos. Eigene Wettbewerbe werden entfernt; fremde können ohne dich weiterlaufen. Die Löschung in der App entfernt außerdem Iris-Fotos auf diesem Gerät. Eine E-Mail-Anfrage kann keine Dateien auf einem offline befindlichen Gerät fernlöschen.</p>
+<p>Ausgenommen sind Kopien in Galerie und Backups, Dateien auf anderen Geräten bis zur dortigen Löschung, bereits entschiedene Rundenergebnisse, textbasierte Sprachcaches mit Ablauf nach 30 Tagen sowie Sicherheitsprotokolle nach den Fristen des Hosters. Für Transaktionen gelten Apples oder Googles Fristen. RevenueCat-Daten werden separat behandelt; bitte uns um Koordination der Löschung. Supportkorrespondenz bleibt, soweit zur Bearbeitung und Dokumentation oder gesetzlich nötig. Wettbewerbsfotos laufen bei Rundenentscheidung ab, mit einer Speicherregel von acht Tagen als Rückfallebene.</p>
+<p>Kontolöschung und Abokündigung sind getrennt. Kündige bei <a href="https://support.apple.com/en-us/118428">Apple</a> oder <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>; Deinstallation oder Kontolöschung stoppt keine Verlängerung. Die Löschanfrage erfordert weder Neuinstallation noch Kauf.</p>
+<p><a href="https://jesuslegardi.github.io/iris-privacy/?lang=de">Einzelheiten zu Datenschutz und Aufbewahrung</a></p>
+</section>
+
 <h2><span class="n">1</span>Konten und Anmeldung</h2>
 
 <h3>Warum gibt es kein Passwort?</h3>
-<p>Weil ein Passwort eine Sache mehr ist, die man verlieren kann, und weil das sichere Aufbewahren von Passwörtern eine ernste Verantwortung ist, die wir nicht übernehmen wollten. Sie melden sich mit Apple oder mit Google an, und einen anderen Weg hinein gibt es nicht. Einen Gastmodus gibt es ebenfalls nicht: Gewohnheiten, Verlauf und Fotografien brauchen ein Konto, zu dem sie gehören.</p>
+<p>Du kannst Iris als Gast ohne E-Mail-Adresse starten. Firebase erstellt eine anonyme Kontokennung für deine Einrichtung, Gewohnheiten, Ziele und das optionale Coaching. Gast bedeutet nicht offline. Du kannst den kostenlosen Tracker weiter nutzen. Das Speichern mit Apple oder Google ist freiwillig.</p>
 
 <h3>Ich habe mich mit Google angemeldet und meine Gewohnheiten sind weg</h3>
-<p>Sie haben mit großer Sicherheit zwei Konten. <strong>Die Anmeldung mit Apple und die Anmeldung mit Google erzeugen getrennte Konten, selbst wenn beide dieselbe E-Mail-Adresse verwenden.</strong> Ihre Gewohnheiten sind im anderen Konto unversehrt. Melden Sie sich ab, melden Sie sich mit dem ursprünglich verwendeten Verfahren wieder an, und sie sind da.</p>
-<p>Wir können zwei Konten nicht zusammenführen. Wenn Sie in beide echte Arbeit gesteckt haben, schreiben Sie uns, und wir gehen die Möglichkeiten durch.</p>
+<p>Speicherst du ein Gastkonto mit einer bisher ungenutzten Apple- oder Google-Anmeldung, bleiben Iris-Kennung und Gastdaten erhalten. Gehört die Anmeldung bereits zu einem Iris-Konto, öffnet sich dieses bestehende Konto; Konten und private Daten werden nicht zusammengeführt. Nutze zum Wiederherstellen die ursprüngliche Anmeldung. Ohne gespeicherte Anmeldung kann beim Entfernen der App oder ihrer Zugangsdaten der Zugriff auf Gastdaten verloren gehen.</p>
 
 <h3>Apple hat Iris eine seltsame E-Mail-Adresse gegeben</h3>
 <p>Das ist „E-Mail-Adresse verbergen". Apple gibt Iris eine Weiterleitungsadresse statt Ihrer eigenen, und Post an diese Adresse erreicht Sie. Nichts in Iris ist davon betroffen. Wenn Sie es vorziehen, dass wir Ihre echte Adresse sehen, können Sie das für Iris in den Einstellungen Ihres iPhones unter Ihrem Namen und dann „Mit Apple anmelden" ändern.</p>
@@ -897,8 +938,8 @@
 <p>Menü, dann Ihr Profil. Der Benutzername muss eindeutig sein und mindestens drei Zeichen haben. Wenn Sie Ihren Anzeigenamen ändern, wird er überall aktualisiert, wo er erscheint, auch in den Listen Ihrer Freunde und in jedem Wettbewerb, an dem Sie teilnehmen.</p>
 
 <h3>Wie lösche ich mein Konto?</h3>
-<p>Menü, dann Ihr Profil, dann Konto löschen. Es wirkt sofort und kann nicht zurückgenommen werden. Bei einem Apple-Konto bitten wir Sie, sich zuvor noch einmal anzumelden: nur so widerrufen wir den Zugriff von Iris auf Ihre Apple-ID, anstatt ihn offen zu lassen.</p>
-<p>Die Löschung nimmt Ihr Profil, Ihre Gewohnheiten, Ihren gesamten Verlauf, Ihre Ziele, Ihre Meilensteine, Ihre Gespräche mit Iris, Ihre Freundschaftsverbindungen und <strong>jede Iris-Fotografie auf dem Telefon, das Sie in der Hand halten</strong>. Ein Wettbewerb, den Sie nicht erstellt haben, läuft für die übrigen Spieler ohne Sie weiter. Die Datenschutzerklärung legt genau dar, was geht und was bleibt.</p>
+<p><a href="#delete-account">Iris-Konto und Daten löschen</a></p>
+<p>In der App: Menü, Profil, Konto löschen. Eine erneute Anmeldung kann zur Bestätigung oder zum Widerruf des Apple-Zugangs nötig sein. Eine abgeschlossene Löschung ist endgültig. Melde Fehler, damit wir die verbleibende Bereinigung prüfen können.</p>
 
 <h2><span class="n">2</span>Gewohnheiten und Punkte</h2>
 
@@ -930,7 +971,7 @@
 
 <h3>Wo werden meine Gewohnheitsfotografien aufbewahrt?</h3>
 <p><strong>Auf Ihrem Telefon, und nirgends sonst.</strong> Sie werden nicht hochgeladen, und wir sehen sie nie. Was wir speichern, ist eine kurze Notiz, dass für diesen Tag eine Fotografie existiert, damit Ihr zweites Gerät weiß, dass es einen Platzhalter statt nichts zeigen soll.</p>
-<p>Die Folge sollte man verstehen: verlieren Sie das Telefon, sind diese Fotografien verloren, denn sie waren nie irgendwo anders.</p>
+<p>Tracking und unbegrenzte lokale Gewohnheitsfotos in voller Qualität sind kostenlos. Ein Foto schließt kein Coaching-Abo ab. Nur eine ausdrücklich im Wettbewerb geteilte Kopie wird für die anderen Teilnehmer hochgeladen.</p>
 
 <h3>Kann ich eine Kopie in meiner gewöhnlichen Fotogalerie behalten?</h3>
 <p>Ja. Nach jeder Fotografie fragt Iris, ob sie nur in Iris oder in Iris und Ihrer Galerie aufbewahrt werden soll. Wählen Sie die Galerie, und eine Kopie geht in Ihre Aufnahmen, wo Ihre gewöhnliche Fotosicherung sie wie jedes andere Bild mitnimmt.</p>
@@ -976,7 +1017,6 @@
 <p>Derzeit nicht. Sie hat eine Stimme pro Sprache, bewusst gewählt.</p>
 
 <h2><span class="n">6</span>Freunde und Wettbewerbe</h2>
-
 <h3>Wie füge ich jemanden hinzu?</h3>
 <p>Suchen Sie den Benutzernamen der Person: Sie brauchen den Benutzernamen, nicht den Anzeigenamen. Sie erhält eine Anfrage und eine Mitteilung, und nichts wird geteilt, bevor sie annimmt.</p>
 
@@ -995,6 +1035,10 @@
 
 <h3>Jemand belästigt mich</h3>
 <p>Blockieren Sie die Person in ihrem Profil. Das Blockieren nimmt Sie beide aus den Freundeslisten des anderen und verhindert, dass eine Anfrage oder Einladung Sie erreicht. Wenn es mehr als eine Belästigung ist, schreiben Sie uns.</p>
+<h3>Unsichere Inhalte melden oder Datenhilfe anfordern</h3>
+<p>Melde Iris-Antworten, Profile oder Wettbewerbsinhalte an iris26app@gmail.com. Nenne den ausgewählten Inhalt, den Grund und gegebenenfalls Benutzer oder Wettbewerb; sende nur das Nötige, nicht den gesamten Chat. Keine Passwörter oder sensiblen Daten anderer Personen. Du kannst auch die Löschung eines Gesprächs oder das Ende einer Datennutzung verlangen. Der Entwickler prüft die Meldung; E-Mail ist kein Notfalldienst.</p>
+
+<p data-report-retention="conditional">Wo Meldungen in der App verfügbar sind, enthalten sie deine Kontokennung, den ausgewählten Inhalt, dessen Referenz, den Grund und eine freiwillige Anmerkung. Nur der Entwickler und autorisierte Moderatoren können die private Meldung lesen. Gemeldete Inhalte und Moderationsprotokolle bleiben bis zu 90 Tage gespeichert, sofern das Gesetz nichts anderes verlangt. Sicherungen zum Wiederherstellen ausgeblendeter Inhalte laufen nach 90 Tagen ab. Das Löschen des Kontos entfernt zugehörige Meldungen und Sicherungen nach der Richtlinie zur Kontolöschung.</p>
 
 <h2><span class="n">7</span>Mitteilungen und Widgets</h2>
 
@@ -1016,15 +1060,9 @@
 <p>Menü, dann Einstellungen, dann Sprache. Sie folgt Ihrem Konto, ist also auf jedem Gerät gleich, auf dem Sie sich anmelden. Bei der ersten Installation nimmt Iris die beste Vermutung anhand Ihres Telefons.</p>
 
 <h2><span class="n">9</span>Bezahlung</h2>
-
-<h3>Was kostet Iris?</h3>
-<p><strong>Derzeit nichts.</strong> Jede Funktion ist verfügbar, und keine Begrenzung ist eingeschaltet. Es gibt nichts zu kaufen, und nirgendwo in der Anwendung werden Kartendaten aufbewahrt.</p>
-
-<h3>Ich habe früher bezahlt und will meinen Kauf zurück</h3>
-<p>Menü, dann die Abonnementseite, dann Käufe wiederherstellen. Das fragt Apple oder Google, was Ihnen gehört, und setzt es wieder ein. Es ist auch das, was auf einem neuen Telefon zu verwenden ist.</p>
-
-<h3>Wie kündige ich?</h3>
-<p>Über Apple oder Google, nie über uns: wir können ein Abonnement nicht in Ihrem Namen kündigen. Auf dem iPhone: Einstellungen, Ihr Name, Abonnements. Auf Android: der Play Store, Ihr Profil, Zahlungen und Abos.</p>
+<p>Tracker und lokale Fotos in voller Qualität sind kostenlos. Fortlaufendes Iris-Coaching ist, wo angeboten, ein freiwilliges Abo. App und natives Kaufblatt von App Store oder Google Play zeigen Monats- oder Jahresplan, lokalen Preis, Abrechnungszeitraum, Verlängerung und gegebenenfalls Probezeit. Sieben kostenlose Probetage gelten nur bei bestätigter Store-Berechtigung; frühere Abonnenten sind möglicherweise nicht berechtigt. Vor der Bestätigung gelten die angezeigten Store-Bedingungen. Zum weiteren Tracking ist kein Kauf nötig.</p>
+<p>Nutze Käufe wiederherstellen in Iris mit dem kaufenden Store-Konto und dem richtigen Iris-Konto. Bei ausstehender Prüfung oder fehlendem Zugang kontaktiere den Support vor einem erneuten Kauf. Verwalte oder kündige beim abrechnenden Store. App-Löschung, Kontolöschung oder Widerruf einer KI-Erlaubnis kündigen kein Abo. Kündige vor der angezeigten Probe- oder Verlängerungsfrist, um die nächste Zahlung zu vermeiden.</p>
+<p>Kontolöschung und Abokündigung sind getrennt. Kündige bei <a href="https://support.apple.com/en-us/118428">Apple</a> oder <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>; Deinstallation oder Kontolöschung stoppt keine Verlängerung. Die Löschanfrage erfordert weder Neuinstallation noch Kauf.</p>
 
 <h2><span class="n">10</span>Ihre Daten</h2>
 
@@ -1035,7 +1073,7 @@
 <p>Ja. Schreiben Sie uns, und wir senden sie. Wir antworten innerhalb von zehn Werktagen und berechnen nichts.</p>
 
 <h3>Es wird nichts nachverfolgt?</h3>
-<p>Nichts. Iris enthält keine Analysesoftware, keine Absturzberichterstattung und keine Werbesoftware. Wir wissen nicht, wie oft Sie sie geöffnet haben, und es gibt hier keine Übersicht, die uns Ihr Verhalten zeigt.</p>
+<p>Iris verkauft keine persönlichen Daten, zeigt keine Werbung und verfolgt dich nicht über andere Apps und Websites. Begrenzte Einführungsdiagnosen werden unter deinem Konto gespeichert: Start, Wahl von Gewohnheit oder Ziel, Angebot, kostenloses Fortfahren, Kauf oder Kontospeicherung, mit Zeit und Gaststatus. Sie enthalten keinen Chattext und werden mit dem Konto gelöscht. RevenueCat-Daten und Sicherheitsprotokolle sind getrennt. Es gibt kein fremdes Werbe- oder Absturzbericht-SDK. Wir speichern höchstens 200 dieser Einführungsereignisse pro Konto.</p>
 
 <h2><span class="n">11</span>Wenn etwas nicht funktioniert</h2>
 
@@ -1054,23 +1092,33 @@
 <p>Diese Seite lädt von nirgendwoher Schriften, Bilder, Skripte oder Nachverfolgung. Von Ihrem Besuch wird durch uns nichts aufgezeichnet.</p>
 </div>
 </article>
-<article data-lang="it">
+<article lang="it" data-lang="it">
 <h1>Aiuto e assistenza</h1>
-<p class="effective">Iris per iPhone e Android · Ultima revisione il 5 settembre 2026</p>
+<p class="effective">Iris · 1 ottobre 2026</p>
 
 <div class="note">
 <p><strong>Scrivete a <a href="mailto:iris26app@gmail.com">iris26app@gmail.com</a>.</strong> Una sola persona legge ogni messaggio. Di norma avrete una risposta in due o tre giorni, e in ogni caso entro dieci giorni lavorativi.</p>
 <p>Se qualcosa non funziona, aiuta molto che ci diciate: quale telefono avete, se è un iPhone o un Android, in quale lingua è impostata Iris, e cosa avete fatto poco prima del problema. Una schermata vale più di una descrizione.</p>
 </div>
 
+<section class="note deletion" data-anchor="delete-account" aria-labelledby="delete-heading-it">
+<h2 id="delete-heading-it">Eliminare l’account Iris e i dati</h2>
+<p>Anche dopo aver disinstallato Iris, scrivi a <a href="mailto:iris26app@gmail.com?subject=Eliminare%20il%20mio%20account%20Iris">iris26app@gmail.com</a>, oggetto “Eliminare il mio account Iris”. Indica nome utente o e-mail di accesso e Apple o Google. Con Nascondi la mia e-mail, indica l’indirizzo di inoltro se noto. Per un ospite, indica l’identificatore se lo possiedi; altrimenti avvisaci. Non devi reinstallare per fare richiesta.</p>
+<p>Verifichiamo la titolarità, normalmente rispondendo all’indirizzo collegato. Non chiediamo mai password, codici, dati della carta o pagamenti. Senza identificatore recuperabile o accesso collegato, un account ospite potrebbe non essere identificabile in sicurezza; spiegheremo le verifiche possibili. Rispondiamo entro dieci giorni lavorativi e descriviamo verifica e completamento.</p>
+<p>Nell’app: menu, profilo, Elimina account. Potrebbe servire un nuovo accesso per confermare la titolarità o revocare Apple. L’eliminazione completata è definitiva. In caso di errore, contattaci per verificare la pulizia restante.</p>
+<p>Vengono eliminati identità di accesso, profilo, abitudini, cronologia, obiettivi, traguardi, conversazioni, impostazioni, dispositivi, diagnostica iniziale, attività di coaching in coda, collegamenti sociali, avatar caricato, punteggi e foto condivise associati. Le competizioni create da te vengono rimosse; le altre possono continuare senza di te. L’eliminazione nell’app cancella anche le foto Iris su quel dispositivo. Una richiesta e-mail non può cancellare a distanza file su un dispositivo offline.</p>
+<p>Restano esclusi copie in galleria e backup, file su altri dispositivi fino alla loro cancellazione, risultati di turni già decisi, cache vocale basata sul testo con scadenza dopo 30 giorni e registri di sicurezza secondo i tempi del fornitore. Le transazioni seguono i tempi Apple o Google. I dati RevenueCat sono gestiti separatamente: chiedici di coordinare la cancellazione. La corrispondenza di supporto resta quanto necessario per risolvere e documentare la richiesta, salvo obblighi di legge. Le foto di competizione scadono alla decisione del turno, con una regola di otto giorni come salvaguardia.</p>
+<p>Eliminare l’account e annullare l’abbonamento sono azioni separate. Annulla presso <a href="https://support.apple.com/en-us/118428">Apple</a> o <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>; disinstallare o eliminare l’account non ferma il rinnovo. La richiesta non richiede reinstallazione né acquisti.</p>
+<p><a href="https://jesuslegardi.github.io/iris-privacy/?lang=it">Dettagli su privacy e conservazione</a></p>
+</section>
+
 <h2><span class="n">1</span>Account e accesso</h2>
 
 <h3>Perché non c'è una password?</h3>
-<p>Perché una password è una cosa in più da perdere, e conservare password in sicurezza è una responsabilità seria che abbiamo scelto di non assumerci. Accedete con Apple o con Google, e non esiste altra via d'ingresso. Non esiste nemmeno una modalità ospite: abitudini, cronologia e fotografie hanno bisogno di un account a cui appartenere.</p>
+<p>Puoi iniziare Iris come ospite senza fornire un’e-mail. Firebase crea un identificatore anonimo per configurazione, abitudini, obiettivi e coaching facoltativo. Ospite non significa offline. Puoi continuare con il monitoraggio gratuito. Salvare l’account con Apple o Google è facoltativo.</p>
 
 <h3>Ho acceduto con Google e le mie abitudini sono sparite</h3>
-<p>Con quasi assoluta certezza avete due account. <strong>Accedere con Apple e accedere con Google creano account distinti, anche quando entrambi usano il medesimo indirizzo di posta elettronica.</strong> Le vostre abitudini sono intatte nell'altro. Uscite, rientrate col metodo che avevate usato all'inizio, e le troverete lì.</p>
-<p>Non ci è possibile unire due account. Se avete messo lavoro reale in entrambi, scriveteci e valuteremo le possibilità.</p>
+<p>Salvando un account ospite con un accesso Apple o Google mai usato, conservi lo stesso identificatore Iris e i dati. Se l’accesso appartiene già a un account Iris, si apre quello esistente; account e dati privati non vengono uniti. Per recuperare un account usa l’accesso originale. Senza accesso salvato, rimuovere l’app o le credenziali può far perdere l’accesso ai dati ospite.</p>
 
 <h3>Apple ha dato a Iris un indirizzo di posta strano</h3>
 <p>È «Nascondi la mia e-mail». Apple consegna a Iris un indirizzo di inoltro invece del vostro, e la posta inviata a quell'indirizzo vi raggiunge. Nulla in Iris ne è interessato. Se preferite che vediamo il vostro indirizzo reale, potete cambiarlo per Iris nelle Impostazioni del vostro iPhone, sotto il vostro nome e poi Accedi con Apple.</p>
@@ -1079,8 +1127,8 @@
 <p>Menu, poi il vostro profilo. Il nome utente deve essere unico e di almeno tre caratteri. Cambiare il nome visualizzato lo aggiorna in ogni luogo in cui compare, comprese le liste dei vostri amici e ogni competizione a cui partecipate.</p>
 
 <h3>Come cancello il mio account?</h3>
-<p>Menu, poi il vostro profilo, poi Cancella account. Ha effetto immediato e non può essere annullato. Su un account Apple vi chiederemo prima di accedere un'altra volta: è così che revochiamo l'accesso di Iris al vostro Apple ID anziché lasciarlo pendente.</p>
-<p>La cancellazione porta via il vostro profilo, le vostre abitudini, tutta la vostra cronologia, i vostri obiettivi, le vostre tappe, le vostre conversazioni con Iris, i vostri legami di amicizia e <strong>ogni fotografia di Iris sul telefono che tenete in mano</strong>. Una competizione che non avete creato continua per gli altri giocatori senza di voi. L'informativa sulla privacy espone con precisione ciò che va e ciò che resta.</p>
+<p><a href="#delete-account">Eliminare l’account Iris e i dati</a></p>
+<p>Nell’app: menu, profilo, Elimina account. Potrebbe servire un nuovo accesso per confermare la titolarità o revocare Apple. L’eliminazione completata è definitiva. In caso di errore, contattaci per verificare la pulizia restante.</p>
 
 <h2><span class="n">2</span>Abitudini e punti</h2>
 
@@ -1112,7 +1160,7 @@
 
 <h3>Dove sono conservate le mie fotografie delle abitudini?</h3>
 <p><strong>Sul vostro telefono, e in nessun altro luogo.</strong> Non sono caricate e noi non le vediamo mai. Ciò che conserviamo è una breve nota che per quel giorno esiste una fotografia, affinché il vostro secondo dispositivo sappia mostrare un segnaposto anziché nulla.</p>
-<p>La conseguenza vale la pena di comprenderla: se perdete il telefono, quelle fotografie sono perdute, perché erano soltanto lì.</p>
+<p>Il monitoraggio e le foto locali illimitate delle abitudini a piena qualità sono gratuiti. Scattare una foto non attiva un abbonamento. Viene caricata solo una copia condivisa espressamente in una competizione.</p>
 
 <h3>Posso tenerne una copia nella mia galleria consueta?</h3>
 <p>Sì. Dopo ogni fotografia Iris domanda se conservarla soltanto in Iris, oppure in Iris e nella vostra galleria. Scegliete la galleria e una copia va nel vostro rullino, dove il vostro solito backup fotografico la prenderà come ogni altra immagine.</p>
@@ -1158,7 +1206,6 @@
 <p>Per ora no. Ha una voce per lingua, scelta deliberatamente.</p>
 
 <h2><span class="n">6</span>Amici e competizioni</h2>
-
 <h3>Come aggiungo qualcuno?</h3>
 <p>Cercate il suo nome utente: serve il nome utente, non il nome visualizzato. La persona riceve una richiesta e una notifica, e nulla è condiviso finché non accetta.</p>
 
@@ -1177,6 +1224,10 @@
 
 <h3>Qualcuno mi sta importunando</h3>
 <p>Bloccatelo dal suo profilo. Il blocco vi toglie reciprocamente dalle liste di amici e impedisce che qualunque richiesta o invito vi raggiunga. Se è peggio di una molestia, scriveteci.</p>
+<h3>Segnalare contenuti pericolosi o chiedere aiuto sui dati</h3>
+<p>Scrivi a iris26app@gmail.com per segnalare risposte Iris, profili o contenuti di competizione. Indica il contenuto selezionato, il motivo e utente o competizione pertinente; invia solo il necessario, non tutta la conversazione. Non includere password o dati sensibili altrui. Puoi anche chiedere di eliminare una conversazione o interrompere un uso dei dati. Lo sviluppatore esamina la segnalazione; l’e-mail non è un servizio d’emergenza.</p>
+
+<p data-report-retention="conditional">Dove è disponibile la segnalazione nell’app, contiene l’identificativo dell’account, il contenuto selezionato, il suo riferimento, il motivo e l’eventuale nota che scegli di inviare. Solo lo sviluppatore e i moderatori autorizzati possono leggere la segnalazione privata. I contenuti segnalati e i registri di moderazione si conservano fino a 90 giorni, salvo obblighi di legge diversi. Le copie per ripristinare contenuti nascosti scadono dopo 90 giorni. La cancellazione dell’account elimina segnalazioni e copie associate secondo la politica di cancellazione degli account.</p>
 
 <h2><span class="n">7</span>Notifiche e widget</h2>
 
@@ -1198,15 +1249,9 @@
 <p>Menu, poi Impostazioni, poi Lingua. Segue il vostro account, quindi è la medesima su ogni dispositivo su cui accedete. La prima volta che installate Iris, essa fa la sua migliore ipotesi a partire dal vostro telefono.</p>
 
 <h2><span class="n">9</span>Pagamenti</h2>
-
-<h3>Quanto costa Iris?</h3>
-<p><strong>Nulla al momento.</strong> Ogni funzione è disponibile e nessun limite è attivo. Non vi è nulla da acquistare, e in nessun punto dell'applicazione sono conservati dati di carte.</p>
-
-<h3>Ho pagato prima e voglio riavere il mio acquisto</h3>
-<p>Menu, poi la pagina dell'abbonamento, poi Ripristina acquisti. Ciò chiede ad Apple o a Google che cosa possedete e lo ripristina. È anche quello che si usa su un telefono nuovo.</p>
-
-<h3>Come disdico?</h3>
-<p>Tramite Apple o Google, mai tramite noi: non ci è possibile disdire un abbonamento in vostro nome. Su iPhone: Impostazioni, il vostro nome, Abbonamenti. Su Android: lo store Play, il vostro profilo, Pagamenti e abbonamenti.</p>
+<p>Monitoraggio e foto locali a piena qualità sono gratuiti. Il coaching continuo Iris è un abbonamento facoltativo dove offerto. App e schermata nativa App Store o Google Play mostrano piano mensile o annuale, prezzo locale, periodo, rinnovo ed eventuale prova. La prova di sette giorni richiede l’idoneità confermata dallo store; chi era già abbonato potrebbe non averne diritto. Valgono le condizioni mostrate prima della conferma. Non occorre acquistare per continuare il monitoraggio.</p>
+<p>Usa Ripristina acquisti in Iris con l’account dello store che ha acquistato e l’account Iris corretto. Se la verifica è in attesa o manca l’accesso, contatta il supporto prima di riacquistare. Gestisci o annulla nello store che ti ha addebitato. Eliminare app o account o ritirare un’autorizzazione IA non annulla l’abbonamento. Annulla prima della scadenza di prova o rinnovo indicata per evitare il prossimo addebito.</p>
+<p>Eliminare l’account e annullare l’abbonamento sono azioni separate. Annulla presso <a href="https://support.apple.com/en-us/118428">Apple</a> o <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>; disinstallare o eliminare l’account non ferma il rinnovo. La richiesta non richiede reinstallazione né acquisti.</p>
 
 <h2><span class="n">10</span>I vostri dati</h2>
 
@@ -1217,7 +1262,7 @@
 <p>Sì. Scriveteci e ve la manderemo. Rispondiamo entro dieci giorni lavorativi e non addebitiamo nulla.</p>
 
 <h3>Non viene tracciato nulla?</h3>
-<p>Nulla. Iris non contiene software di analisi, né segnalazione di arresti anomali, né software pubblicitario. Non sappiamo quante volte l'avete aperta, e qui non esiste alcun pannello che ci mostri il vostro comportamento.</p>
+<p>Iris non vende dati personali, non mostra pubblicità e non ti segue tra altre app e siti. Conserviamo diagnostica limitata dell’introduzione nel tuo account: avvio, scelta di abitudine o obiettivo, offerta vista, continuazione gratuita, acquisto o salvataggio dell’account, con orario e stato ospite. Non contiene chat ed è eliminata con l’account. Dati RevenueCat e registri di sicurezza sono separati. Non vi sono SDK esterni pubblicitari o di segnalazione arresti anomali. Conserviamo al massimo 200 di questi eventi introduttivi per account.</p>
 
 <h2><span class="n">11</span>Quando qualcosa non funziona</h2>
 
@@ -1236,23 +1281,33 @@
 <p>Questa pagina non carica caratteri, immagini, script né tracciatori da alcun luogo. Non registriamo nulla della vostra visita.</p>
 </div>
 </article>
-<article data-lang="ja">
+<article lang="ja" data-lang="ja">
 <h1>ヘルプとサポート</h1>
-<p class="effective">iPhone 版および Android 版 Iris · 最終確認 2026年9月5日</p>
+<p class="effective">Iris · 2026年10月1日</p>
 
 <div class="note">
 <p><strong>ご連絡は <a href="mailto:iris26app@gmail.com">iris26app@gmail.com</a> まで。</strong>すべてのメッセージを一人が読んでいます。通常は2日から3日で、いかなる場合も10営業日以内に返信します。</p>
 <p>不具合の際は、次をお知らせいただけると大変助かります。お使いの機種、iPhone か Android か、Iris の言語設定、そして不具合の直前に何をされたか。説明文よりもスクリーンショットのほうが役に立ちます。</p>
 </div>
 
+<section class="note deletion" data-anchor="delete-account" aria-labelledby="delete-heading-ja">
+<h2 id="delete-heading-ja">Irisアカウントとデータの削除</h2>
+<p>アプリを削除済みでも、<a href="mailto:iris26app@gmail.com?subject=Delete%20my%20Iris%20account">iris26app@gmail.com</a>へ件名「Irisアカウントの削除」で依頼できます。ユーザー名またはログイン用メールと、AppleかGoogleかを記載してください。「メールを非公開」の場合、分かれば転送用アドレスを記載してください。ゲストの場合は分かる範囲でアカウントIDを記載し、不明ならその旨をお知らせください。依頼のための再インストールは不要です。</p>
+<p>削除前に、通常はアカウントに関連するメールへの返信で所有者を確認します。パスワード、確認コード、カード情報、支払いは要求しません。復元可能なIDや関連付けたログインのないゲストアカウントは、安全に特定できないことがあります。確認できる内容を説明します。10営業日以内に返信し、確認と完了の手順をご案内します。</p>
+<p>アプリではメニュー、プロフィール、「アカウントを削除」の順に開きます。所有者確認やAppleアクセスの取り消しのため、再ログインが必要な場合があります。完了した削除は元に戻せません。エラーが出た場合は、残った処理を確認できるようご連絡ください。</p>
+<p>ログインID、プロフィール、習慣、履歴、目標、マイルストーン、会話、設定、端末記録、導入診断、待機中のコーチング処理、友人関係、アップロードしたアバター、関連する競争のスコアと共有写真を削除します。自分が作成した競争は削除され、他の人の競争は自分を除いて続く場合があります。アプリ内の削除はその端末のIris写真も消去します。メールでの依頼ではオフライン端末のファイルを遠隔消去できません。</p>
+<p>ギャラリーやバックアップのコピー、別端末で消去されるまでのファイル、確定済みの競争結果、テキストを基に保存され30日で期限切れになる音声キャッシュ、ホスト事業者の保持期間に従うセキュリティログは対象外です。ストア取引にはAppleまたはGoogleの保持規則が適用されます。RevenueCatの記録は別途扱うため、削除の取り次ぎをご依頼ください。サポートメールは依頼の解決と記録に必要な間保持し、法的な保持義務が適用される場合があります。競争写真はラウンド確定時に削除し、8日間のストレージ期限を補助策とします。</p>
+<p>アカウント削除と購読解約は別の操作です。<a href="https://support.apple.com/en-us/118428">Apple</a>または<a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>で解約してください。アプリやアカウントの削除では更新は停止しません。削除依頼に再インストールや購入は不要です。</p>
+<p><a href="https://jesuslegardi.github.io/iris-privacy/?lang=ja">プライバシーと保存期間の詳細</a></p>
+</section>
+
 <h2><span class="n">1</span>アカウントとサインイン</h2>
 
 <h3>なぜパスワードがないのですか</h3>
-<p>パスワードは失う対象がひとつ増えるだけであり、またパスワードを安全に保管することは重い責任であって、それを負わないことを選んだからです。サインインは Apple または Google で行い、他の入口はありません。ゲストモードもありません。習慣、履歴、写真は、それが属するアカウントを必要とします。</p>
+<p>メールアドレスを入力せず、ゲストとしてIrisを始められます。Firebaseは匿名のアカウントIDを作成し、設定、習慣、目標、任意のコーチングを関連付けます。ゲストでもデータが端末内だけに保存されるわけではありません。無料の記録機能を引き続き使えます。AppleまたはGoogleでアカウントを保存するかどうかは任意です。</p>
 
 <h3>Google でサインインしたら習慣が消えました</h3>
-<p>ほぼ確実にアカウントが二つあります。<strong>Apple でのサインインと Google でのサインインは、たとえ同一の電子メールアドレスであっても別個のアカウントを作成します。</strong>習慣はもう一方に無事に残っています。サインアウトし、最初に使った方法でサインインし直せば、そこにあります。</p>
-<p>二つのアカウントを統合することはできません。両方に相当の記録が積み上がっている場合は、ご連絡ください。取りうる選択肢を一緒に検討します。</p>
+<p>未使用のAppleまたはGoogleログインでゲストアカウントを保存すると、同じIris IDとゲストデータを保持します。そのログインが既存のIrisアカウントに属する場合は既存アカウントを開き、アカウントや個人データを統合しません。復元には元のログイン方法を使ってください。ログインを保存していない場合、アプリや認証情報の削除によりゲストデータへアクセスできなくなることがあります。</p>
 
 <h3>Apple が Iris に見慣れないメールアドレスを渡しました</h3>
 <p>それは「メールを非公開」です。Apple はご自身のアドレスの代わりに転送用アドレスを Iris に渡し、そこへ送られたメールはご本人に届きます。Iris の動作には何の影響もありません。実際のアドレスを当方に渡したい場合は、iPhone の設定でご自身の名前を開き、「Apple でサインイン」から Iris について変更できます。</p>
@@ -1261,8 +1316,8 @@
 <p>メニューからプロフィールへ。ユーザー名は重複できず、3文字以上必要です。表示名を変えると、フレンドの一覧や参加中のコンペティションを含め、表示されるすべての場所で更新されます。</p>
 
 <h3>アカウントを削除するには</h3>
-<p>メニュー、プロフィール、アカウントの削除の順に進んでください。即時に効力を生じ、取り消すことはできません。Apple アカウントの場合、先にもう一度サインインをお願いします。そうすることで、Iris の Apple ID へのアクセス権を宙に浮かせず、確実に失効させられます。</p>
-<p>削除により、プロフィール、習慣、履歴のすべて、目標、マイルストーン、Iris との会話、フレンドのつながり、そして<strong>手元の端末にある Iris の写真すべて</strong>が失われます。ご自身が作成していないコンペティションは、あなたを除いて他の参加者のために継続します。何が失われ何が残るかは、プライバシーポリシーに詳細に記載しています。</p>
+<p><a href="#delete-account">Irisアカウントとデータの削除</a></p>
+<p>アプリではメニュー、プロフィール、「アカウントを削除」の順に開きます。所有者確認やAppleアクセスの取り消しのため、再ログインが必要な場合があります。完了した削除は元に戻せません。エラーが出た場合は、残った処理を確認できるようご連絡ください。</p>
 
 <h2><span class="n">2</span>習慣とポイント</h2>
 
@@ -1294,7 +1349,7 @@
 
 <h3>習慣の写真はどこに保存されますか</h3>
 <p><strong>お使いの端末の中だけです。</strong>アップロードされず、当方が見ることは一切ありません。当方が保存するのは、その日に写真が存在するという短い記録だけで、これは2台目の端末が「何もない」ではなく代替表示を出せるようにするためのものです。</p>
-<p>その帰結はご理解いただく価値があります。端末を失えばその写真も失われます。写真はそこにしか存在しなかったからです。</p>
+<p>習慣の記録と、元の画質で保存する枚数無制限のローカル習慣写真は無料です。撮影によってコーチングを購読することはありません。競争で明示的に共有したコピーだけを参加者向けにアップロードします。</p>
 
 <h3>通常の写真ギャラリーにも控えを残せますか</h3>
 <p>残せます。撮影のたびに Iris が、Iris 内だけに保存するか、Iris とギャラリーの両方に保存するかを尋ねます。ギャラリーを選ぶと複製がカメラロールに入り、普段お使いの写真バックアップが他の画像と同様に取り込みます。</p>
@@ -1340,7 +1395,6 @@
 <p>現時点ではできません。言語ごとに1つの声を意図して選んでいます。</p>
 
 <h2><span class="n">6</span>フレンドとコンペティション</h2>
-
 <h3>フレンドを追加するには</h3>
 <p>相手のユーザー名で検索してください。必要なのはユーザー名であり、表示名ではありません。相手に申請と通知が届き、承認されるまで何も共有されません。</p>
 
@@ -1359,6 +1413,10 @@
 
 <h3>迷惑な相手がいます</h3>
 <p>相手のプロフィールからブロックしてください。ブロックすると双方のフレンド一覧から相互に外れ、申請や招待が届かなくなります。迷惑の域を超えている場合は、ご連絡ください。</p>
+<h3>問題のある内容の報告とデータの相談</h3>
+<p>Irisの返答、プロフィール、競争の内容はiris26app@gmail.comへ報告できます。該当する内容、理由、関連ユーザーや競争を示し、会話全体ではなく必要な部分だけ送ってください。パスワードや他人の機密情報は含めないでください。会話の削除やデータ利用の停止も依頼できます。開発者が確認しますが、メールは緊急窓口ではありません。</p>
+
+<p data-report-retention="conditional">アプリ内報告が利用できるバージョンでは、報告にアカウント識別子、選択したコンテンツ、その参照情報、理由、任意で送信するメモが含まれます。非公開の報告を閲覧できるのは開発者と権限のあるモデレーターだけです。報告されたコンテンツと対応記録は、法律で別の期間が必要な場合を除き、最大90日間保持します。非表示コンテンツを復元するためのバックアップは90日後に期限切れになります。アカウントを削除すると、アカウント削除方針に従い、そのアカウントに関連する報告とバックアップも削除されます。</p>
 
 <h2><span class="n">7</span>通知とウィジェット</h2>
 
@@ -1380,15 +1438,9 @@
 <p>メニュー、設定、言語の順です。設定はアカウントに従うため、サインインするすべての端末で同じになります。初回インストール時は、端末の設定から最も適切と思われる言語を推定します。</p>
 
 <h2><span class="n">9</span>お支払い</h2>
-
-<h3>Iris の料金は</h3>
-<p><strong>現時点では無料です。</strong>すべての機能が利用でき、制限は一切かかっていません。購入するものはなく、アプリケーションのどこにもカード情報は保持されていません。</p>
-
-<h3>以前に支払いました。購入を戻したいです</h3>
-<p>メニュー、購読のページ、購入の復元の順です。これにより Apple または Google に保有内容を問い合わせ、復元します。新しい端末でもこれを使います。</p>
-
-<h3>解約はどうすればよいですか</h3>
-<p>Apple または Google 経由で行ってください。当方経由ではできません。当方が代わって解約することはできません。iPhone では、設定、ご自身の名前、サブスクリプション。Android では、Play ストア、プロフィール、お支払いと定期購入。</p>
+<p>記録機能と元の画質のローカル写真は無料です。継続的なIrisコーチングは、提供される場合に任意で購読できます。アプリとApp StoreまたはGoogle Playの購入画面に、月間・年間プラン、現地価格、請求期間、更新条件、試用が表示されます。7日間の試用はストアが対象と判断した場合だけで、過去の購読者は対象外の場合があります。確定前に表示されるストアの条件が適用されます。記録の継続に購入は不要です。</p>
+<p>購入したストアアカウントと正しいIrisアカウントで、Irisの「購入を復元」を使ってください。確認中やアクセスできない場合は再購入せずサポートへ連絡してください。管理・解約は請求元のストアで行います。アプリやアカウントの削除、AIの許可の撤回では購読は解約されません。次の請求を避けるには、ストアに表示された試用・更新の期限前に解約してください。</p>
+<p>アカウント削除と購読解約は別の操作です。<a href="https://support.apple.com/en-us/118428">Apple</a>または<a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>で解約してください。アプリやアカウントの削除では更新は停止しません。削除依頼に再インストールや購入は不要です。</p>
 
 <h2><span class="n">10</span>あなたのデータ</h2>
 
@@ -1399,7 +1451,7 @@
 <p>お渡しします。ご連絡ください。10営業日以内に回答し、費用は一切かかりません。</p>
 
 <h3>本当に何も追跡していないのですか</h3>
-<p>何も追跡していません。Iris には解析ソフトウェア、クラッシュ報告、広告ソフトウェアが一切含まれていません。何回開かれたかも当方は知らず、利用者の行動を見せる管理画面も存在しません。</p>
+<p>Irisは個人情報を販売せず、広告を表示せず、他のアプリやサイトをまたいで追跡しません。開始、習慣・目標の選択、プラン閲覧、無料での継続、購入、アカウント保存など、導入時の限定的な診断情報を日時とゲスト状態とともにアカウントに記録します。チャット本文は含まず、アカウントとともに削除します。RevenueCatの購読情報とセキュリティログは別です。外部の広告・クラッシュ報告SDKはありません。 これらの初期設定イベント記録は、アカウントごとに最大200件保持します。</p>
 
 <h2><span class="n">11</span>うまく動かないとき</h2>
 
@@ -1418,23 +1470,33 @@
 <p>本ページは、フォント、画像、スクリプト、トラッカーをいかなる場所からも読み込みません。当方は利用者の訪問について何も記録しません。</p>
 </div>
 </article>
-<article data-lang="ko">
+<article lang="ko" data-lang="ko">
 <h1>도움말과 지원</h1>
-<p class="effective">iPhone 및 Android용 Iris · 최종 확인 2026년 9월 5일</p>
+<p class="effective">Iris · 2026년 10월 1일</p>
 
 <div class="note">
 <p><strong><a href="mailto:iris26app@gmail.com">iris26app@gmail.com</a>으로 연락해 주십시오.</strong> 모든 메시지를 한 사람이 읽습니다. 보통 이틀에서 사흘 안에, 어떤 경우에도 10영업일 안에 답변을 받으실 수 있습니다.</p>
 <p>문제가 생겼다면 다음을 알려 주시면 큰 도움이 됩니다. 어떤 기기를 쓰시는지, iPhone인지 Android인지, Iris의 언어 설정, 그리고 문제가 생기기 직전에 무엇을 하셨는지. 설명보다 화면 캡처가 훨씬 도움이 됩니다.</p>
 </div>
 
+<section class="note deletion" data-anchor="delete-account" aria-labelledby="delete-heading-ko">
+<h2 id="delete-heading-ko">Iris 계정과 데이터 삭제</h2>
+<p>앱을 삭제했어도 <a href="mailto:iris26app@gmail.com?subject=Delete%20my%20Iris%20account">iris26app@gmail.com</a>으로 제목을 “Iris 계정 삭제”로 하여 요청할 수 있습니다. 사용자 이름 또는 로그인 이메일과 Apple·Google 중 사용한 방식을 적어주세요. 나의 이메일 가리기를 사용했다면 아는 경우 전달 주소를 적어주세요. 게스트는 계정 ID가 있으면 적고, 모르면 알려주세요. 요청을 위해 다시 설치할 필요는 없습니다.</p>
+<p>삭제 전 보통 계정에 연결된 이메일로 답장하여 소유권을 확인합니다. 비밀번호, 인증 코드, 카드 정보나 결제를 요구하지 않습니다. 복구할 ID나 연결된 로그인이 없는 게스트 계정은 안전하게 식별하기 어려울 수 있으며 확인 가능한 사항을 설명합니다. 영업일 기준 10일 이내에 답변하고 확인 및 완료 절차를 안내합니다.</p>
+<p>앱에서 메뉴, 프로필, 계정 삭제를 여세요. 소유권 확인 또는 Apple 접근 철회를 위해 다시 로그인해야 할 수 있습니다. 완료된 삭제는 되돌릴 수 없습니다. 오류가 나타나면 남은 정리를 확인하도록 문의하세요.</p>
+<p>로그인 신원, 프로필, 습관, 기록, 목표, 마일스톤, 대화, 설정, 기기 기록, 시작 진단, 대기 중인 코칭 작업, 친구 관계, 업로드한 아바타, 관련 대회 점수와 공유 사진이 삭제됩니다. 직접 만든 대회는 삭제되고 다른 대회는 본인 없이 계속될 수 있습니다. 앱 내 삭제는 해당 기기의 Iris 사진도 지웁니다. 이메일 요청으로 오프라인 기기의 파일을 원격 삭제할 수는 없습니다.</p>
+<p>갤러리·백업 사본, 다른 기기에서 지워질 때까지의 파일, 이미 확정된 대회 결과, 텍스트로 구분되고 30일 후 만료되는 음성 캐시와 제공업체 보존 기간에 따른 보안 로그는 제외됩니다. 스토어 거래에는 Apple 또는 Google 보존 규칙이 적용됩니다. RevenueCat 기록은 별도로 처리하므로 삭제 요청 전달을 문의하세요. 지원 이메일은 요청 해결과 기록에 필요한 동안 보관하며 법적 의무가 적용될 수 있습니다. 대회 사진은 라운드 확정 시 삭제하며 8일 저장 만료 규칙을 보완책으로 사용합니다.</p>
+<p>계정 삭제와 구독 취소는 별개입니다. <a href="https://support.apple.com/en-us/118428">Apple</a> 또는 <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>에서 취소하세요. 앱·계정 삭제로 갱신이 멈추지 않습니다. 재설치나 구매 없이 삭제를 요청할 수 있습니다.</p>
+<p><a href="https://jesuslegardi.github.io/iris-privacy/?lang=ko">개인정보와 보존 기간 상세</a></p>
+</section>
+
 <h2><span class="n">1</span>계정과 로그인</h2>
 
 <h3>비밀번호가 왜 없나요?</h3>
-<p>비밀번호는 잃어버릴 것이 하나 더 늘어나는 일이고, 비밀번호를 안전하게 보관하는 것은 무거운 책임이라 저희가 지지 않기로 했기 때문입니다. Apple 또는 Google로 로그인하며, 다른 입구는 없습니다. 게스트 모드도 없습니다. 습관, 기록, 사진에는 그것이 속할 계정이 필요합니다.</p>
+<p>이메일 없이 게스트로 Iris를 시작할 수 있습니다. Firebase는 설정, 습관, 목표와 선택적 코칭을 연결하는 익명 계정 ID를 만듭니다. 게스트라고 해서 데이터가 기기에만 저장되는 것은 아닙니다. 무료 기록 기능을 계속 사용할 수 있으며 Apple 또는 Google로 계정을 저장하는 것은 선택 사항입니다.</p>
 
 <h3>Google로 로그인했더니 습관이 사라졌습니다</h3>
-<p>거의 틀림없이 계정이 두 개입니다. <strong>Apple로 로그인하는 것과 Google로 로그인하는 것은, 둘이 같은 이메일 주소를 쓰더라도 서로 별개의 계정을 만듭니다.</strong> 습관은 다른 쪽에 그대로 있습니다. 로그아웃한 뒤 처음에 쓰셨던 방법으로 다시 로그인하면 거기에 있습니다.</p>
-<p>두 계정을 합칠 수는 없습니다. 양쪽에 실제로 쌓인 기록이 있다면 연락해 주십시오. 어떤 선택지가 있는지 함께 살펴보겠습니다.</p>
+<p>아직 사용하지 않은 Apple 또는 Google 로그인으로 게스트 계정을 저장하면 같은 Iris ID와 게스트 데이터가 유지됩니다. 이미 Iris 계정에 연결된 로그인이면 기존 계정을 열며 두 계정이나 개인 데이터를 합치지 않습니다. 기존 계정은 원래 로그인 방식으로 복구하세요. 로그인을 저장하지 않았다면 앱이나 인증 정보를 삭제할 때 게스트 데이터에 접근하지 못할 수 있습니다.</p>
 
 <h3>Apple이 Iris에 낯선 이메일 주소를 주었습니다</h3>
 <p>그것은 "나의 이메일 가리기"입니다. Apple이 본인 주소 대신 전달용 주소를 Iris에 주며, 그 주소로 보낸 메일은 본인에게 도착합니다. Iris의 동작에는 아무 영향이 없습니다. 저희가 실제 주소를 보게 하고 싶으시면, iPhone 설정에서 본인 이름을 열고 "Apple로 로그인"에서 Iris에 대해 바꿀 수 있습니다.</p>
@@ -1443,8 +1505,8 @@
 <p>메뉴에서 프로필로 들어가십시오. 사용자 이름은 중복될 수 없고 세 글자 이상이어야 합니다. 표시 이름을 바꾸면 친구 목록과 참가 중인 대회를 포함하여 표시되는 모든 곳에서 함께 바뀝니다.</p>
 
 <h3>계정을 삭제하려면</h3>
-<p>메뉴, 프로필, 계정 삭제 순으로 들어가십시오. 즉시 효력이 생기며 되돌릴 수 없습니다. Apple 계정이라면 먼저 한 번 더 로그인해 주시기를 요청합니다. 그렇게 해야 Iris의 Apple ID 접근 권한을 남겨 두지 않고 확실히 철회할 수 있습니다.</p>
-<p>삭제하면 프로필, 습관, 기록 전체, 목표, 마일스톤, Iris와의 대화, 친구 연결, 그리고 <strong>손에 든 기기에 있는 Iris의 모든 사진</strong>이 사라집니다. 본인이 만들지 않은 대회는 본인을 제외한 채 다른 참가자를 위하여 계속됩니다. 무엇이 사라지고 무엇이 남는지는 개인정보 처리방침에 정확히 적어 두었습니다.</p>
+<p><a href="#delete-account">Iris 계정과 데이터 삭제</a></p>
+<p>앱에서 메뉴, 프로필, 계정 삭제를 여세요. 소유권 확인 또는 Apple 접근 철회를 위해 다시 로그인해야 할 수 있습니다. 완료된 삭제는 되돌릴 수 없습니다. 오류가 나타나면 남은 정리를 확인하도록 문의하세요.</p>
 
 <h2><span class="n">2</span>습관과 점수</h2>
 
@@ -1476,7 +1538,7 @@
 
 <h3>제 습관 사진은 어디에 보관되나요?</h3>
 <p><strong>본인 기기 안에만, 그 밖에는 어디에도 없습니다.</strong> 업로드되지 않으며 저희는 결코 보지 않습니다. 저희가 저장하는 것은 그 날에 사진이 있다는 짧은 기록뿐이고, 이는 두 번째 기기가 아무것도 아닌 대신 자리 표시를 보여 줄 수 있게 하기 위한 것입니다.</p>
-<p>그 결과는 알아 두실 만합니다. 기기를 잃으면 그 사진도 사라집니다. 사진은 그곳에만 있었기 때문입니다.</p>
+<p>습관 기록과 원본 화질의 무제한 로컬 습관 사진은 무료입니다. 사진을 찍어도 코칭이 구독되지 않습니다. 대회에서 명시적으로 공유한 사본만 다른 참가자에게 제공하기 위해 업로드합니다.</p>
 
 <h3>평소 쓰는 사진 갤러리에도 사본을 둘 수 있나요?</h3>
 <p>가능합니다. 사진을 찍을 때마다 Iris가 Iris에만 보관할지, Iris와 갤러리에 함께 보관할지 묻습니다. 갤러리를 고르면 사본이 사진첩에 들어가고, 평소 쓰시는 사진 백업이 다른 이미지와 똑같이 가져갑니다.</p>
@@ -1522,7 +1584,6 @@
 <p>지금은 불가능합니다. 언어마다 하나의 목소리를 의도해서 골랐습니다.</p>
 
 <h2><span class="n">6</span>친구와 대회</h2>
-
 <h3>친구를 추가하려면</h3>
 <p>상대의 사용자 이름으로 검색하십시오. 필요한 것은 사용자 이름이며 표시 이름이 아닙니다. 상대에게 요청과 알림이 가고, 상대가 수락하기 전에는 아무것도 공유되지 않습니다.</p>
 
@@ -1541,6 +1602,10 @@
 
 <h3>누가 저를 괴롭힙니다</h3>
 <p>그 사람의 프로필에서 차단하십시오. 차단하면 서로의 친구 목록에서 빠지고 어떤 요청이나 초대도 도달하지 않습니다. 단순한 불편을 넘는 일이라면 연락해 주십시오.</p>
+<h3>유해 콘텐츠 신고 또는 데이터 문의</h3>
+<p>Iris 답변, 프로필 또는 대회 콘텐츠를 iris26app@gmail.com에 신고할 수 있습니다. 해당 내용, 이유와 관련 사용자·대회를 적고 전체 대화 대신 필요한 부분만 보내세요. 비밀번호나 타인의 민감한 정보는 포함하지 마세요. 대화 삭제나 특정 데이터 이용 중단도 요청할 수 있습니다. 개발자가 검토하며 이메일은 긴급 서비스가 아닙니다.</p>
+
+<p data-report-retention="conditional">앱 내 신고 기능을 사용할 수 있는 버전에서는 신고에 계정 식별자, 선택한 콘텐츠, 해당 콘텐츠의 참조 정보, 이유와 선택적으로 보내는 메모가 포함됩니다. 비공개 신고는 개발자와 권한이 있는 관리자만 읽을 수 있습니다. 신고된 콘텐츠와 처리 기록은 법률에서 다른 기간을 요구하지 않는 한 최대 90일간 보관됩니다. 숨긴 콘텐츠를 복원하기 위한 백업은 90일 후 만료됩니다. 계정을 삭제하면 계정 삭제 정책에 따라 해당 계정과 연결된 신고와 백업도 삭제됩니다.</p>
 
 <h2><span class="n">7</span>알림과 위젯</h2>
 
@@ -1562,15 +1627,9 @@
 <p>메뉴, 설정, 언어 순입니다. 설정은 계정을 따라다니므로 로그인하는 모든 기기에서 같습니다. 처음 설치할 때는 기기 설정을 보고 가장 알맞을 언어를 추정합니다.</p>
 
 <h2><span class="n">9</span>결제</h2>
-
-<h3>Iris는 얼마인가요?</h3>
-<p><strong>현재는 무료입니다.</strong> 모든 기능을 쓸 수 있고 어떤 제한도 켜져 있지 않습니다. 살 것이 없으며, 애플리케이션 어디에도 카드 정보가 보관되지 않습니다.</p>
-
-<h3>전에 결제했는데 구매를 되돌리고 싶습니다</h3>
-<p>메뉴, 구독 페이지, 구매 복원 순입니다. 이는 Apple 또는 Google에 보유 내역을 물어 되살립니다. 새 기기에서도 이것을 쓰시면 됩니다.</p>
-
-<h3>해지는 어떻게 하나요?</h3>
-<p>Apple 또는 Google을 통해서 하십시오. 저희를 통해서는 되지 않으며, 저희가 대신 해지할 수도 없습니다. iPhone에서는 설정, 본인 이름, 구독. Android에서는 Play 스토어, 프로필, 결제 및 정기 결제.</p>
+<p>기록과 원본 화질의 로컬 사진은 무료입니다. 지속적인 Iris 코칭은 제공되는 경우 선택적으로 구독합니다. 앱과 App Store 또는 Google Play의 기본 구매 화면에 월간·연간 요금제, 현지 가격, 결제 주기, 갱신 조건 및 체험이 표시됩니다. 7일 체험은 스토어가 자격을 확인한 경우에만 적용되며 이전 구독자는 제외될 수 있습니다. 확인 전에 표시된 스토어 조건이 적용됩니다. 기록을 계속하는 데 구매는 필요하지 않습니다.</p>
+<p>구매한 스토어 계정과 올바른 Iris 계정으로 Iris의 구매 복원을 사용하세요. 확인 대기 중이거나 접근이 안 되면 다시 구매하기 전에 지원팀에 문의하세요. 관리와 취소는 결제한 스토어에서 합니다. 앱·계정 삭제나 AI 허용 철회로 구독이 취소되지 않습니다. 다음 청구를 피하려면 스토어에 표시된 체험 또는 갱신 기한 전에 취소하세요.</p>
+<p>계정 삭제와 구독 취소는 별개입니다. <a href="https://support.apple.com/en-us/118428">Apple</a> 또는 <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a>에서 취소하세요. 앱·계정 삭제로 갱신이 멈추지 않습니다. 재설치나 구매 없이 삭제를 요청할 수 있습니다.</p>
 
 <h2><span class="n">10</span>이용자의 데이터</h2>
 
@@ -1581,7 +1640,7 @@
 <p>받으실 수 있습니다. 연락해 주시면 보내 드립니다. 10영업일 안에 답변하며 비용은 없습니다.</p>
 
 <h3>정말 아무것도 추적하지 않나요?</h3>
-<p>아무것도 하지 않습니다. Iris에는 분석 소프트웨어도, 오류 보고도, 광고 소프트웨어도 없습니다. 몇 번 여셨는지도 저희는 모르며, 이용자의 행동을 보여 주는 대시보드도 없습니다.</p>
+<p>Iris는 개인정보를 판매하거나 광고를 표시하지 않으며 다른 앱과 사이트에 걸쳐 추적하지 않습니다. 시작, 습관·목표 선택, 상품 보기, 무료 계속, 구매, 계정 저장 등 제한된 시작 과정 진단을 시간 및 게스트 여부와 함께 계정에 기록합니다. 채팅 내용은 포함하지 않으며 계정과 함께 삭제합니다. RevenueCat 구독 정보와 보안 로그는 별도입니다. 외부 광고 또는 충돌 보고 SDK는 없습니다. 이러한 시작 이벤트 기록은 계정당 최대 200개 보관합니다.</p>
 
 <h2><span class="n">11</span>무언가 잘 안 될 때</h2>
 
@@ -1600,23 +1659,33 @@
 <p>본 페이지는 글꼴, 이미지, 스크립트, 추적기를 어디에서도 불러오지 않습니다. 저희는 이용자의 방문에 관하여 아무것도 기록하지 않습니다.</p>
 </div>
 </article>
-<article data-lang="zh-Hans">
+<article lang="zh-Hans" data-lang="zh-Hans">
 <h1>帮助与支持</h1>
-<p class="effective">Iris(iPhone 版与 Android 版) · 最后核校于 2026 年 9 月 5 日</p>
+<p class="effective">Iris · 2026年10月1日</p>
 
 <div class="note">
 <p><strong>请写信至 <a href="mailto:iris26app@gmail.com">iris26app@gmail.com</a>。</strong>每一封信都由一个人亲自阅读。通常您会在两三天内收到回复,最迟不超过十个工作日。</p>
 <p>如果某处出了问题,请告诉我们:您用的是哪款手机、是 iPhone 还是 Android、Iris 设置的是哪种语言,以及出问题之前您做了什么。一张截图比一段描述有用得多。</p>
 </div>
 
+<section class="note deletion" data-anchor="delete-account" aria-labelledby="delete-heading-zh-Hans">
+<h2 id="delete-heading-zh-Hans">删除 Iris 账户和数据</h2>
+<p>即使已经卸载应用，也可发邮件至 <a href="mailto:iris26app@gmail.com?subject=Delete%20my%20Iris%20account">iris26app@gmail.com</a>，主题为“Iris 账户删除”。请提供用户名或登录邮箱，并说明使用 Apple 还是 Google。如果使用隐藏邮箱，请在知道的情况下提供转发地址。访客请提供已知的账户标识；不知道也请说明。提交请求无需重新安装。</p>
+<p>删除前我们会验证所有权，通常回复至账户关联的邮箱。我们绝不索要密码、验证码、银行卡信息或付款。没有可恢复标识或已关联登录的访客账户可能无法安全识别，我们会说明能进行哪些验证。我们在十个工作日内回复，并说明验证和完成步骤。</p>
+<p>在应用中打开菜单、个人资料、删除账户。可能需要重新登录以确认所有权或撤销 Apple 授权。完成后无法撤销。如果出现错误，请联系我们检查剩余清理。</p>
+<p>删除会移除登录身份、资料、习惯、历史、目标、里程碑、对话、设置、设备记录、入门诊断、排队中的指导任务、社交关系、上传的头像以及关联的比赛分数和分享照片。你创建的比赛会移除，其他比赛可在没有你的情况下继续。应用内删除也会清除该设备的 Iris 照片。邮件请求无法远程擦除离线设备文件。</p>
+<p>不在此删除范围内的包括图库或设备备份副本、其他设备上尚未清除的文件、已确定的比赛结果、按文本标识且 30 天后到期的语音缓存，以及按托管服务商期限保留的安全日志。商店交易按 Apple 或 Google 的规则保留。RevenueCat 记录单独处理，可请我们协调删除请求。支持邮件保留至解决和记录请求所需期限，仍可能适用法定保留义务。比赛照片在回合确定时删除，并以八天存储到期规则作为保障。</p>
+<p>删除账户与取消订阅是两回事。请在 <a href="https://support.apple.com/en-us/118428">Apple</a> 或 <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a> 取消；卸载或删除账户不会停止续订。申请删除无需重新安装或购买。</p>
+<p><a href="https://jesuslegardi.github.io/iris-privacy/?lang=zh-Hans">完整隐私与保留期限说明</a></p>
+</section>
+
 <h2><span class="n">1</span>账户与登录</h2>
 
 <h3>为什么没有密码?</h3>
-<p>因为密码只是又多了一样可以丢掉的东西,而妥善保管密码是一份沉重的责任,我们选择不去承担它。您用 Apple 或 Google 登录,除此之外没有别的入口。也没有访客模式:习惯、历史记录和照片都需要一个归属的账户。</p>
+<p>你可以不提供电子邮件，以访客身份开始使用 Iris。Firebase 会创建匿名账户标识，将设置、习惯、目标和可选的指导服务与你关联。访客不代表数据只保存在本地。你可以继续免费记录习惯。通过 Apple 或 Google 保存账户是可选的。</p>
 
 <h3>我用 Google 登录后习惯都不见了</h3>
-<p>几乎可以肯定,您有两个账户。<strong>用 Apple 登录和用 Google 登录会创建彼此独立的账户,即便二者用的是同一个电子邮箱。</strong>您的习惯在另一个账户里安然无恙。退出登录,改用您最初使用的方式登录,它们就在那里。</p>
-<p>我们无法合并两个账户。如果您在两个账户里都积累了真正的记录,请写信给我们,我们一起看看有哪些办法。</p>
+<p>使用尚未用于 Iris 的 Apple 或 Google 登录保存访客账户，会保留同一 Iris 标识和访客数据。如果该登录已属于现有 Iris 账户，则打开现有账户，不会合并两个账户或其私人数据。恢复已有账户时请使用原来的登录方式。未保存登录方式时，删除应用或凭据可能使你无法访问访客数据。</p>
 
 <h3>Apple 给了 Iris 一个奇怪的邮箱地址</h3>
 <p>那是"隐藏我的邮件地址"。Apple 交给 Iris 的是一个转发地址而不是您本人的地址,发往该地址的邮件仍会到您手中。这对 Iris 的运行没有任何影响。如果您希望我们看到您真实的地址,可以在 iPhone 的"设置"里打开您的姓名,进入"使用 Apple 登录",在其中针对 Iris 更改。</p>
@@ -1625,8 +1694,8 @@
 <p>菜单,然后进入您的个人资料。用户名必须唯一且至少三个字符。修改显示名称后,它会在出现过的所有位置一并更新,包括您好友的列表以及您参加的任何竞赛。</p>
 
 <h3>怎么删除账户?</h3>
-<p>菜单,然后个人资料,再点删除账户。它立即生效,且无法撤销。若是 Apple 账户,我们会先请您再登录一次:只有这样才能真正撤销 Iris 对您 Apple ID 的访问权,而不是把它悬在那里。</p>
-<p>删除会带走您的个人资料、习惯、全部历史记录、目标、里程碑、与 Iris 的对话、好友关系,以及<strong>您手中这部手机上 Iris 的全部照片</strong>。并非由您创建的竞赛会在没有您的情况下为其他参赛者继续进行。隐私政策详细列明了什么会消失、什么会留下。</p>
+<p><a href="#delete-account">删除 Iris 账户和数据</a></p>
+<p>在应用中打开菜单、个人资料、删除账户。可能需要重新登录以确认所有权或撤销 Apple 授权。完成后无法撤销。如果出现错误，请联系我们检查剩余清理。</p>
 
 <h2><span class="n">2</span>习惯与积分</h2>
 
@@ -1658,7 +1727,7 @@
 
 <h3>我的习惯照片存在哪里?</h3>
 <p><strong>只在您的手机上,别无他处。</strong>它们不会上传,我们也从不看到。我们保存的只是一条简短的记录,表明那一天存在一张照片,以便您的第二台设备知道该显示一个占位而不是空白。</p>
-<p>由此带来的后果值得了解:如果手机丢了,那些照片也就没了,因为它们从来只在那里。</p>
+<p>习惯记录和不限数量、保留完整画质的本地习惯照片免费。拍照不会订阅指导服务。只有你明确选择在比赛中分享的副本才会上传供其他参赛者查看。</p>
 
 <h3>可以在我平时的相册里留一份吗?</h3>
 <p>可以。每拍完一张,Iris 都会问您是只存在 Iris 里,还是同时存到您的相册。选择相册,一份副本便会进入您的相机胶卷,您平时的照片备份会像对待其他图片一样把它带走。</p>
@@ -1704,7 +1773,6 @@
 <p>目前不行。每种语言她有一个声音,都是特意挑选的。</p>
 
 <h2><span class="n">6</span>好友与竞赛</h2>
-
 <h3>怎么添加一个人?</h3>
 <p>搜索对方的用户名——您需要用户名,而不是他们的显示名称。对方会收到一条请求和一条通知,在他们接受之前不会共享任何东西。</p>
 
@@ -1723,6 +1791,10 @@
 
 <h3>有人在骚扰我</h3>
 <p>在对方的个人资料里屏蔽他。屏蔽会把你们从彼此的好友列表中移除,并阻止任何请求或邀请到达您。如果事情比"打扰"更严重,请写信给我们。</p>
+<h3>举报不安全内容或咨询数据问题</h3>
+<p>可向 iris26app@gmail.com 举报 Iris 回复、个人资料或比赛内容。指出所选内容、原因及相关用户或比赛，仅发送必要部分，不要发送完整对话。不要包含密码或他人的敏感资料。也可请求删除对话或停止某种数据用途。开发者会审查举报；电子邮件不是紧急服务。</p>
+
+<p data-report-retention="conditional">在提供应用内举报功能的版本中，举报包含你的账户标识符、所选内容、内容引用、理由及你自愿发送的备注。只有开发者和获授权的审核人员可以查看非公开举报。举报内容和审核记录最多保留90天，法律另有要求的除外。用于恢复隐藏内容的备份在90天后到期。删除账户时，会按照账户删除政策移除与该账户关联的举报和备份。</p>
 
 <h2><span class="n">7</span>通知与小组件</h2>
 
@@ -1744,15 +1816,9 @@
 <p>菜单,然后设置,然后语言。它跟随您的账户,因此在您登录的每一台设备上都相同。首次安装 Iris 时,它会依据您的手机做出最合适的推测。</p>
 
 <h2><span class="n">9</span>付费</h2>
-
-<h3>Iris 收费吗?</h3>
-<p><strong>目前完全免费。</strong>所有功能都可用,没有开启任何额度限制。没有任何可购买的东西,应用中的任何位置都不保存银行卡信息。</p>
-
-<h3>我以前付过费,想恢复我的购买</h3>
-<p>菜单,然后订阅页面,再点恢复购买。这会向 Apple 或 Google 询问您拥有什么并予以恢复。换新手机时也用这个。</p>
-
-<h3>怎么取消?</h3>
-<p>通过 Apple 或 Google,绝不是通过我们——我们无法代您取消订阅。在 iPhone 上:设置,您的姓名,订阅。在 Android 上:Play 商店,您的头像,支付和订阅。</p>
+<p>记录功能和完整画质的本地照片免费。持续的 Iris 指导在提供时属于可选订阅。应用和 App Store 或 Google Play 的原生购买页面显示月度或年度方案、本地价格、计费周期、续订条件和试用。七天试用仅在商店确认符合资格时提供；以前订阅过的用户可能不符合资格。确认前以商店显示的条款为准。继续记录无需购买。</p>
+<p>请使用购买订阅的商店账户和正确的 Iris 账户，在 Iris 中选择恢复购买。如果验证待处理或没有访问权限，请先联系支持，不要再次购买。在收款商店管理或取消订阅。删除应用、删除账户或撤回 AI 许可不会取消商店订阅。要避免下次扣费，请在商店显示的试用或续订期限前取消。</p>
+<p>删除账户与取消订阅是两回事。请在 <a href="https://support.apple.com/en-us/118428">Apple</a> 或 <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a> 取消；卸载或删除账户不会停止续订。申请删除无需重新安装或购买。</p>
 
 <h2><span class="n">10</span>您的数据</h2>
 
@@ -1763,7 +1829,7 @@
 <p>可以。写信给我们,我们会发给您。我们在十个工作日内答复,且不收取任何费用。</p>
 
 <h3>真的什么都不追踪?</h3>
-<p>什么都不追踪。Iris 不含分析软件、不含崩溃报告、也不含广告软件。我们不知道您打开过它多少次,这里也没有任何面板向我们展示您的行为。</p>
+<p>Iris 不出售个人数据，不显示广告，也不跨应用或网站追踪你。我们在账户中记录有限的入门诊断：开始、选择习惯或目标、查看套餐、免费继续、购买或保存账户，以及时间和访客状态。不包含聊天文本，并随账户删除。RevenueCat 订阅资料与安全日志另行处理。没有第三方广告或崩溃报告 SDK。 每个账户最多保留200条此类入门事件记录。</p>
 
 <h2><span class="n">11</span>出问题的时候</h2>
 
@@ -1782,23 +1848,33 @@
 <p>本页面不从任何地方加载字体、图像、脚本或追踪器。我们不记录您此次访问的任何信息。</p>
 </div>
 </article>
-<article data-lang="zh-Hant">
+<article lang="zh-Hant" data-lang="zh-Hant">
 <h1>說明與支援</h1>
-<p class="effective">Iris(iPhone 版與 Android 版) · 最後核校於 2026 年 9 月 5 日</p>
+<p class="effective">Iris · 2026年10月1日</p>
 
 <div class="note">
 <p><strong>請寫信至 <a href="mailto:iris26app@gmail.com">iris26app@gmail.com</a>。</strong>每一封信都由一個人親自閱讀。通常您會在兩三天內收到回覆,最遲不超過十個工作日。</p>
 <p>如果某處出了問題,請告訴我們:您用的是哪款手機、是 iPhone 還是 Android、Iris 設定的是哪種語言,以及出問題之前您做了什麼。一張截圖比一段描述有用得多。</p>
 </div>
 
+<section class="note deletion" data-anchor="delete-account" aria-labelledby="delete-heading-zh-Hant">
+<h2 id="delete-heading-zh-Hant">刪除 Iris 帳戶與資料</h2>
+<p>即使已移除應用程式，也可寄信至 <a href="mailto:iris26app@gmail.com?subject=Delete%20my%20Iris%20account">iris26app@gmail.com</a>，主旨為「Iris 帳戶刪除」。請提供使用者名稱或登入電子郵件，並說明使用 Apple 還是 Google。如果使用隱藏電子郵件，請在知道的情況下提供轉寄地址。訪客請提供已知的帳戶識別碼；不知道也請說明。提出請求無需重新安裝。</p>
+<p>刪除前我們會驗證所有權，通常回覆至帳戶關聯的信箱。我們絕不索取密碼、驗證碼、信用卡資訊或付款。沒有可復原識別碼或已關聯登入的訪客帳戶可能無法安全識別，我們會說明能進行哪些驗證。我們在十個工作日內回覆，並說明驗證與完成步驟。</p>
+<p>在應用程式中開啟選單、個人資料、刪除帳戶。可能需要重新登入以確認所有權或撤銷 Apple 授權。完成後無法復原。如果出現錯誤，請聯絡我們檢查剩餘清理。</p>
+<p>刪除會移除登入身分、個人資料、習慣、紀錄、目標、里程碑、對話、設定、裝置紀錄、入門診斷、排程中的指導工作、社交關係、上傳的頭像及關聯的比賽分數與分享照片。你建立的比賽會移除，其他比賽可在沒有你的情況下繼續。應用程式內刪除也會清除該裝置的 Iris 照片。郵件請求無法遠端清除離線裝置檔案。</p>
+<p>不在此刪除範圍內的包括相簿或裝置備份副本、其他裝置上尚未清除的檔案、已確定的比賽結果、按文字識別且 30 天後到期的語音快取，以及按託管服務商期限保留的安全日誌。商店交易按 Apple 或 Google 的規則保留。RevenueCat 紀錄另行處理，可請我們協調刪除請求。支援郵件保留至解決與記錄請求所需期限，仍可能適用法定保留義務。比賽照片在回合確定時刪除，並以八天儲存到期規則作為保障。</p>
+<p>刪除帳戶與取消訂閱是兩回事。請在 <a href="https://support.apple.com/en-us/118428">Apple</a> 或 <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a> 取消；移除應用程式或刪除帳戶不會停止續訂。申請刪除無需重新安裝或購買。</p>
+<p><a href="https://jesuslegardi.github.io/iris-privacy/?lang=zh-Hant">完整隱私與保留期限說明</a></p>
+</section>
+
 <h2><span class="n">1</span>帳號與登入</h2>
 
 <h3>為什麼沒有密碼?</h3>
-<p>因為密碼只是又多了一樣可以弄丟的東西,而妥善保管密碼是一份沉重的責任,我們選擇不去承擔它。您用 Apple 或 Google 登入,除此之外沒有別的入口。也沒有訪客模式:習慣、歷史紀錄與照片都需要一個歸屬的帳號。</p>
+<p>你可以不提供電子郵件，以訪客身分開始使用 Iris。Firebase 會建立匿名帳戶識別碼，將設定、習慣、目標與選用的指導服務與你關聯。訪客不代表資料只保存在本機。你可以繼續免費記錄習慣。透過 Apple 或 Google 儲存帳戶是選用功能。</p>
 
 <h3>我用 Google 登入後習慣都不見了</h3>
-<p>幾乎可以確定,您有兩個帳號。<strong>用 Apple 登入和用 Google 登入會建立彼此獨立的帳號,即使兩者用的是同一個電子郵件。</strong>您的習慣在另一個帳號裡安然無恙。登出後改用您最初使用的方式登入,它們就在那裡。</p>
-<p>我們無法合併兩個帳號。如果您在兩個帳號裡都累積了真正的紀錄,請寫信給我們,我們一起看看有哪些辦法。</p>
+<p>使用尚未用於 Iris 的 Apple 或 Google 登入儲存訪客帳戶，會保留同一 Iris 識別碼與訪客資料。如果該登入已屬於現有 Iris 帳戶，則開啟現有帳戶，不會合併兩個帳戶或其私人資料。復原已有帳戶時請使用原來的登入方式。未儲存登入方式時，刪除應用程式或憑證可能使你無法存取訪客資料。</p>
 
 <h3>Apple 給了 Iris 一個奇怪的電子郵件地址</h3>
 <p>那是「隱藏我的電子郵件」。Apple 交給 Iris 的是一個轉寄地址而不是您本人的地址,寄到該地址的信仍會到您手中。這對 Iris 的運作沒有任何影響。如果您希望我們看到您真實的地址,可以在 iPhone 的「設定」裡打開您的姓名,進入「使用 Apple 登入」,在其中針對 Iris 更改。</p>
@@ -1807,8 +1883,8 @@
 <p>選單,然後進入您的個人資料。使用者名稱必須唯一且至少三個字元。修改顯示名稱後,它會在出現過的所有位置一併更新,包括您好友的清單以及您參加的任何競賽。</p>
 
 <h3>怎麼刪除帳號?</h3>
-<p>選單,然後個人資料,再點刪除帳號。它立即生效,且無法撤銷。若是 Apple 帳號,我們會先請您再登入一次:只有這樣才能真正撤銷 Iris 對您 Apple ID 的存取權,而不是把它懸在那裡。</p>
-<p>刪除會帶走您的個人資料、習慣、全部歷史紀錄、目標、里程碑、與 Iris 的對話、好友關係,以及<strong>您手中這部手機上 Iris 的全部照片</strong>。並非由您建立的競賽會在沒有您的情況下為其他參賽者繼續進行。隱私權政策詳列了什麼會消失、什麼會留下。</p>
+<p><a href="#delete-account">刪除 Iris 帳戶與資料</a></p>
+<p>在應用程式中開啟選單、個人資料、刪除帳戶。可能需要重新登入以確認所有權或撤銷 Apple 授權。完成後無法復原。如果出現錯誤，請聯絡我們檢查剩餘清理。</p>
 
 <h2><span class="n">2</span>習慣與點數</h2>
 
@@ -1840,7 +1916,7 @@
 
 <h3>我的習慣照片存在哪裡?</h3>
 <p><strong>只在您的手機上,別無他處。</strong>它們不會上傳,我們也從不看到。我們保存的只是一則簡短的紀錄,表明那一天存在一張照片,以便您的第二部裝置知道該顯示一個佔位而不是空白。</p>
-<p>由此帶來的後果值得了解:如果手機弄丟了,那些照片也就沒了,因為它們從來只在那裡。</p>
+<p>習慣記錄與不限數量、保留完整畫質的本機習慣照片免費。拍照不會訂閱指導服務。只有你明確選擇在比賽中分享的副本才會上傳供其他參賽者查看。</p>
 
 <h3>可以在我平常的相簿裡留一份嗎?</h3>
 <p>可以。每拍完一張,Iris 都會問您是只存在 Iris 裡,還是同時存到您的相簿。選擇相簿,一份副本便會進入您的相機膠捲,您平常的照片備份會像對待其他圖片一樣把它帶走。</p>
@@ -1886,7 +1962,6 @@
 <p>目前不行。每種語言她有一個聲音,都是特意挑選的。</p>
 
 <h2><span class="n">6</span>好友與競賽</h2>
-
 <h3>怎麼加一個人?</h3>
 <p>搜尋對方的使用者名稱——您需要使用者名稱,而不是他們的顯示名稱。對方會收到一則邀請和一則通知,在他們接受之前不會分享任何東西。</p>
 
@@ -1905,6 +1980,10 @@
 
 <h3>有人在騷擾我</h3>
 <p>在對方的個人資料裡封鎖他。封鎖會把你們從彼此的好友清單中移除,並阻止任何邀請或請求抵達您。如果事情比「打擾」更嚴重,請寫信給我們。</p>
+<h3>檢舉不安全內容或諮詢資料問題</h3>
+<p>可向 iris26app@gmail.com 檢舉 Iris 回覆、個人資料或比賽內容。指出所選內容、原因及相關使用者或比賽，只寄送必要部分，不要寄送完整對話。不要包含密碼或他人的敏感資料。也可請求刪除對話或停止某種資料用途。開發者會審查檢舉；電子郵件不是緊急服務。</p>
+
+<p data-report-retention="conditional">在提供應用程式內檢舉功能的版本中，檢舉包含你的帳戶識別碼、所選內容、內容參照、理由及你自願傳送的備註。只有開發者和獲授權的審核人員可以查看非公開檢舉。檢舉內容和審核紀錄最多保留90天，法律另有要求的除外。用於復原隱藏內容的備份在90天後到期。刪除帳戶時，會按照帳戶刪除政策移除與該帳戶關聯的檢舉和備份。</p>
 
 <h2><span class="n">7</span>通知與小工具</h2>
 
@@ -1926,15 +2005,9 @@
 <p>選單,然後設定,然後語言。它跟隨您的帳號,因此在您登入的每一部裝置上都相同。首次安裝 Iris 時,它會依據您的手機做出最合適的推測。</p>
 
 <h2><span class="n">9</span>付費</h2>
-
-<h3>Iris 收費嗎?</h3>
-<p><strong>目前完全免費。</strong>所有功能都可用,沒有開啟任何額度限制。沒有任何可購買的東西,應用程式中的任何位置都不保存卡片資訊。</p>
-
-<h3>我以前付過費,想恢復我的購買</h3>
-<p>選單,然後訂閱頁面,再點恢復購買。這會向 Apple 或 Google 詢問您擁有什麼並予以恢復。換新手機時也用這個。</p>
-
-<h3>怎麼取消?</h3>
-<p>透過 Apple 或 Google,絕不是透過我們——我們無法代您取消訂閱。在 iPhone 上:設定,您的姓名,訂閱項目。在 Android 上:Play 商店,您的大頭貼,付款和訂閱。</p>
+<p>記錄功能與完整畫質的本機照片免費。持續的 Iris 指導在提供時屬於選用訂閱。應用程式與 App Store 或 Google Play 的原生購買畫面顯示月度或年度方案、本地價格、計費週期、續訂條件與試用。七天試用僅在商店確認符合資格時提供；曾訂閱者可能不符合資格。確認前以商店顯示的條款為準。繼續記錄無需購買。</p>
+<p>請使用購買訂閱的商店帳戶與正確的 Iris 帳戶，在 Iris 選擇回復購買。如果驗證待處理或沒有存取權，請先聯絡支援，不要再次購買。在收款商店管理或取消訂閱。刪除應用程式、刪除帳戶或撤回 AI 許可不會取消商店訂閱。要避免下次扣款，請在商店顯示的試用或續訂期限前取消。</p>
+<p>刪除帳戶與取消訂閱是兩回事。請在 <a href="https://support.apple.com/en-us/118428">Apple</a> 或 <a href="https://support.google.com/googleplay/answer/7018481">Google Play</a> 取消；移除應用程式或刪除帳戶不會停止續訂。申請刪除無需重新安裝或購買。</p>
 
 <h2><span class="n">10</span>您的資料</h2>
 
@@ -1945,7 +2018,7 @@
 <p>可以。寫信給我們,我們會寄給您。我們在十個工作日內答覆,且不收取任何費用。</p>
 
 <h3>真的什麼都不追蹤?</h3>
-<p>什麼都不追蹤。Iris 不含分析軟體、不含當機回報、也不含廣告軟體。我們不知道您開啟過它多少次,這裡也沒有任何面板向我們展示您的行為。</p>
+<p>Iris 不出售個人資料、不顯示廣告，也不跨應用程式或網站追蹤你。我們在帳戶中記錄有限的入門診斷：開始、選擇習慣或目標、查看方案、免費繼續、購買或儲存帳戶，以及時間與訪客狀態。不包含聊天文字，並隨帳戶刪除。RevenueCat 訂閱資料與安全日誌另行處理。沒有第三方廣告或當機報告 SDK。 每個帳戶最多保留200筆此類入門事件紀錄。</p>
 
 <h2><span class="n">11</span>出問題的時候</h2>
 
@@ -2019,6 +2092,14 @@
       articles[i].classList.toggle("active", on);
       if (on) found = true;
     }
+    var sections = document.querySelectorAll('[data-anchor="delete-account"]');
+    for (var j = 0; j < sections.length; j++) {
+      if (sections[j].parentElement.getAttribute("data-lang") === tag) {
+        sections[j].id = "delete-account";
+      } else {
+        sections[j].removeAttribute("id");
+      }
+    }
     if (!found) return show("en");         // a language we do not have yet
     document.documentElement.lang = tag;
     if (select) select.value = tag;
@@ -2027,20 +2108,34 @@
     return tag;
   }
 
+  function scrollToSection() {
+    if (location.hash === "#delete-account") {
+      var section = document.getElementById("delete-account");
+      if (section) section.scrollIntoView();
+    }
+  }
+
   show(requested() || fromBrowser());
+  scrollToSection();
 
   if (select) {
     select.addEventListener("change", function () {
       var tag = show(select.value);
       if (history.replaceState) {
-        history.replaceState(null, "", "?lang=" + encodeURIComponent(tag));
+        history.replaceState(null, "", "?lang=" + encodeURIComponent(tag) + (location.hash === "#delete-account" ? location.hash : ""));
       }
-      window.scrollTo(0, 0);
+      if (location.hash === "#delete-account") scrollToSection();
+      else window.scrollTo(0, 0);
     });
   }
 
   window.addEventListener("popstate", function () {
     show(requested() || fromBrowser());
+    scrollToSection();
+  });
+  window.addEventListener("hashchange", function () {
+    show(requested() || fromBrowser());
+    scrollToSection();
   });
 })();
 </script>
